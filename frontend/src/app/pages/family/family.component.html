@@ -1,0 +1,32 @@
+<div [dir]="isAr ? 'rtl' : 'ltr'" class="page-content">
+  <div class="page-hero"><div class="container">
+    <nav class="breadcrumb"><a [routerLink]="prefix || '/'">{{ isAr ? 'الرئيسية' : 'Home' }}</a> / <span>{{ isAr ? 'للعائلة' : 'For the Family' }}</span></nav>
+    <h1>{{ isAr ? 'كلمة للعائلة' : 'For the Family' }}</h1>
+    <p>{{ isAr ? 'نحن نفهم قلقكم ونحن هنا للمساعدة' : 'We understand your concern and we\'re here to help' }}</p>
+  </div></div>
+
+  <div class="container page-body">
+    <div class="two-col">
+      <div>
+        <span class="eyebrow">{{ isAr ? 'كلمة للعائلة' : 'For the Family' }}</span>
+        <h2>{{ isAr ? 'نحن نفهم قلقكم' : 'We understand your concern' }}</h2>
+        <p>{{ isAr ? 'عندما يمرّ أحد أفراد الأسرة بإدمان أو اضطراب نفسي، تكون الأسرة كلها في حالة قلق وحيرة. نحن هنا لنشرح لكم ما يحدث، ونساعدكم على فهم كيف يمكنكم المساندة دون أن يتحول قلقكم إلى ضغط إضافي على المريض.' : 'When a family member goes through addiction or a mental disorder, the whole family is in anxiety. We\'re here to explain and help you understand how to support without adding pressure.' }}</p>
+        <div class="privacy-note">
+          <h3>{{ isAr ? 'خصوصية المريض لا تتعارض مع دعمكم' : 'Patient privacy does not conflict with your support' }}</h3>
+          <p>{{ isAr ? 'مشاركتكم في الرحلة لا تعني معرفة كل التفاصيل. نحرص على توازن دقيق: أن تشعروا بأنكم جزء من العلاج، وأن يشعر المريض في الوقت نفسه بأن مساحته الخاصة محفوظة.' : 'Your participation in the journey does not mean knowing every detail. We maintain a careful balance.' }}</p>
+        </div>
+      </div>
+      <div class="card-white">
+        <h3>{{ isAr ? 'كيف نُشرككم في الرحلة؟' : 'How do we involve you in the journey?' }}</h3>
+        <div class="family-steps">
+          <div class="family-step" *ngFor="let s of steps; let i = index">
+            <span class="family-num">{{ i + 1 }}</span>
+            <span>{{ isAr ? s.ar : s.en }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="photo-box" style="margin-top:40px">{{ isAr ? '[صورة للعائلة]' : '[Family photo]' }}</div>
+  </div>
+  <app-cta-band [lang]="lang.lang"></app-cta-band>
+</div>

@@ -1,0 +1,40 @@
+<div [dir]="isAr ? 'rtl' : 'ltr'" class="page-content">
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb"><a [routerLink]="prefix || '/'">{{ isAr ? 'الرئيسية' : 'Home' }}</a> / <span>{{ isAr ? 'من نحن' : 'About Us' }}</span></nav>
+      <h1>{{ isAr ? 'من نحن' : 'About Us' }}</h1>
+      <p>{{ isAr ? 'مركز متخصص في الطب النفسي وعلاج الإدمان منذ 2001' : 'Specialized psychiatry & addiction treatment center since 2001' }}</p>
+    </div>
+  </div>
+
+  <div class="container page-body">
+    <div class="two-col">
+      <div>
+        <span class="eyebrow">{{ isAr ? 'من نحن' : 'Who We Are' }}</span>
+        <h2>{{ isAr ? 'خبرة منذ عام 2001 في الطب النفسي وعلاج الإدمان' : 'Expert since 2001 in Psychiatry & Addiction' }}</h2>
+        <p>{{ isAr ? 'نؤمن بأن كل إنسان يستحق فرصة حقيقية لبداية جديدة. نعمل من خلال منظومة متكاملة تجمع بين الرعاية الطبية، والدعم النفسي، والتأهيل السلوكي، في بيئة آمنة وداعمة تحفظ كرامة الإنسان وتدعم قدرته على التغيير.' : 'We believe every person deserves a real chance at a new beginning. We work through an integrated system combining medical care, psychological support, and behavioral rehabilitation.' }}</p>
+        <div class="photo-box">{{ isAr ? '[صورة واجهة المركز]' : '[Center facade photo]' }}</div>
+      </div>
+      <div>
+        <div class="card-white">
+          <span class="eyebrow">{{ isAr ? 'رؤيتنا' : 'Our Vision' }}</span>
+          <h3>{{ isAr ? 'تعافي المرضى وعائلاتهم وأصدقائهم.' : 'Recovery of patients and their families.' }}</h3>
+          <p>{{ isAr ? 'التعافي الحقيقي لا يقتصر على المريض وحده، فالإدمان والاضطرابات النفسية تمتد آثارها إلى الأسرة والمحيطين به. لذلك نبني رحلة تعافٍ متكاملة.' : 'True recovery extends beyond the patient alone. Addiction and mental disorders affect family and those around them. So we build a comprehensive recovery journey.' }}</p>
+        </div>
+        <div class="card-navy" style="margin-top:16px">
+          <span class="eyebrow light">{{ isAr ? 'فلسفتنا' : 'Our Philosophy' }}</span>
+          <h3>{{ isAr ? 'رحلة التعافي هي بداية حياتك الجديدة.' : 'The recovery journey is the beginning of your new life.' }}</h3>
+          <p class="muted-light">{{ isAr ? 'لا ننظر إلى العلاج باعتباره مجرد توقف عن التعاطي أو السيطرة على الأعراض، بل نراه بداية لمرحلة جديدة من الوعي والنضج والاختيار.' : 'We see treatment not as just stopping use, but as the beginning of a new phase of awareness, maturity, and choice.' }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-row">
+      <div class="photo-box">{{ isAr ? '[صورة غرف الإقامة]' : '[Rooms photo]' }}</div>
+      <div class="photo-box">{{ isAr ? '[صورة غرفة الجلسات]' : '[Session room]' }}</div>
+      <div class="photo-box">{{ isAr ? '[صورة المساحات المشتركة]' : '[Common areas]' }}</div>
+    </div>
+  </div>
+
+  <app-cta-band [lang]="lang.lang"></app-cta-band>
+</div>

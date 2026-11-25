@@ -1,0 +1,62 @@
+<header [dir]="isAr ? 'rtl' : 'ltr'">
+  <!-- Top info bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <span>{{ isAr ? 'خط سري على مدار الساعة:' : 'Confidential line 24/7:' }}
+        <a [href]="'tel:+' + settings?.phone" dir="ltr" class="top-phone">{{ settings?.phone || '0128 266 2870' }}</a>
+      </span>
+      <span class="top-addr hide-mobile">{{ isAr ? settings?.address_ar : settings?.address_en }}</span>
+    </div>
+  </div>
+
+  <!-- Main header -->
+  <div class="container header-inner">
+    <a [routerLink]="isAr ? '/' : '/en'" class="logo-link">
+      <img src="/assets/logo-mark.png" alt="Recovery Journey" width="50" height="50">
+      <span class="logo-text">
+        <span class="logo-name">{{ isAr ? 'رحلة التعافي' : 'Recovery Journey' }}</span>
+        <span class="logo-sub">{{ isAr ? 'للطب النفسي وعلاج الإدمان' : 'Psychiatry & Addiction Treatment' }}</span>
+      </span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="desktop-nav" [attr.aria-label]="isAr ? 'القائمة الرئيسية' : 'Main Navigation'">
+      <a *ngFor="let item of nav"
+         [routerLink]="item.path"
+         class="nav-link"
+         [class.active]="isActive(item.path)">{{ item.label }}</a>
+    </nav>
+
+    <div class="header-actions">
+      <!-- Language toggle -->
+      <a [routerLink]="otherLangUrl" class="lang-toggle">{{ isAr ? 'EN' : 'ع' }}</a>
+      <!-- WhatsApp -->
+      <a [href]="'https://wa.me/' + settings?.whatsapp" aria-label="WhatsApp" class="wa-icon-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 10c0 3 2 5 5 5l1-1.5-2-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2z"/></svg>
+      </a>
+      <!-- CTA -->
+      <a [routerLink]="isAr ? '/contact' : '/en/contact'" class="cta-btn">
+        {{ isAr ? 'احجز تقييمك السري' : 'Book Assessment' }}
+      </a>
+      <!-- Hamburger -->
+      <button class="hamburger" (click)="menuOpen = !menuOpen" [attr.aria-label]="isAr ? 'القائمة' : 'Menu'">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-drawer" [class.open]="menuOpen" (click)="menuOpen = false">
+    <nav (click)="$event.stopPropagation()">
+      <a *ngFor="let item of nav"
+         [routerLink]="item.path"
+         class="mobile-nav-link"
+         [class.active]="isActive(item.path)"
+         (click)="menuOpen = false">{{ item.label }}</a>
+      <a [routerLink]="isAr ? '/contact' : '/en/contact'" class="mobile-cta" (click)="menuOpen = false">
+        {{ isAr ? 'احجز تقييمك السري' : 'Book Assessment' }}
+      </a>
+      <a [routerLink]="otherLangUrl" class="mobile-lang" (click)="menuOpen = false">{{ isAr ? 'English' : 'العربية' }}</a>
+    </nav>
+  </div>
+</header>

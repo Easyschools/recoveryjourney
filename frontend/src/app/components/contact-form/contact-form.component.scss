@@ -1,0 +1,63 @@
+.contact-form {
+  background: #fff;
+  color: var(--navy);
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-title { font-family: 'Noto Naskh Arabic', serif; font-weight: 700; font-size: 24px; }
+.form-sub { margin: -8px 0 0; font-size: 15px; color: var(--text-muted); }
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  font: inherit;
+  font-weight: 400;
+  border: 1px solid var(--input-line);
+  border-radius: 12px;
+  padding: 12px 14px;
+  min-height: 48px;
+  box-sizing: border-box;
+  background: var(--cream);
+  &:focus { outline: none; border-color: var(--navy); }
+  &.invalid { border-color: #d00; }
+}
+textarea { resize: vertical; min-height: 90px; }
+
+.err { color: #d00; font-size: 13px; font-weight: 400; }
+
+.submit-btn {
+  font: inherit;
+  font-weight: 700;
+  font-size: 17px;
+  background: var(--gold);
+  color: var(--navy);
+  border: 0;
+  border-radius: var(--pill);
+  padding: 14px 24px;
+  min-height: 52px;
+  cursor: pointer;
+  &:hover { background: var(--gold-light); }
+  &:disabled { opacity: .7; cursor: not-allowed; }
+}
+
+.wa-alt {
+  color: var(--whatsapp);
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+}
+
+.success-msg { background: #e8f5e9; color: #1b5e20; border-radius: 12px; padding: 14px; font-weight: 600; }
+.error-msg { background: #fce4ec; color: #880e4f; border-radius: 12px; padding: 14px; font-weight: 600; }

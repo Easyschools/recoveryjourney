@@ -1,0 +1,57 @@
+<footer [dir]="isAr ? 'rtl' : 'ltr'">
+  <div class="footer-grid container">
+    <!-- Brand -->
+    <div class="footer-brand">
+      <div class="brand-row">
+        <img src="/assets/logo-mark.png" alt="Recovery Journey" width="48" height="48">
+        <span class="brand-name">{{ isAr ? 'رحلة التعافي' : 'Recovery Journey' }}</span>
+      </div>
+      <p>{{ isAr ? 'مركز متخصص في الطب النفسي وعلاج الإدمان — منذ عام 2001.' : 'A specialized psychiatry & addiction treatment center — since 2001.' }}</p>
+      <span class="tagline">{{ isAr ? 'أنت الحكاية… أنت البداية' : 'You are the story… You are the beginning' }}</span>
+    </div>
+
+    <!-- Site links -->
+    <nav class="footer-nav" [attr.aria-label]="isAr ? 'روابط الموقع' : 'Site Links'">
+      <span class="footer-heading">{{ isAr ? 'الموقع' : 'Site' }}</span>
+      <a [routerLink]="prefix + '/about'">{{ isAr ? 'من نحن' : 'About' }}</a>
+      <a [routerLink]="prefix + '/services'">{{ isAr ? 'خدماتنا' : 'Services' }}</a>
+      <a [routerLink]="prefix + '/detox'">{{ isAr ? 'مركز سحب السموم' : 'Detox Center' }}</a>
+      <a [routerLink]="prefix + '/team'">{{ isAr ? 'فريق العمل' : 'Team' }}</a>
+      <a [routerLink]="prefix + '/journey'">{{ isAr ? 'رحلة العلاج' : 'The Journey' }}</a>
+      <a [routerLink]="prefix + '/family'">{{ isAr ? 'كلمة للعائلة' : 'For the Family' }}</a>
+      <a [routerLink]="prefix + '/faq'">{{ isAr ? 'الأسئلة الشائعة' : 'FAQ' }}</a>
+    </nav>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <span class="footer-heading">{{ isAr ? 'تواصل معنا' : 'Contact' }}</span>
+      <a [href]="'tel:+' + settings?.phone" dir="ltr" class="phone-link">{{ settings?.phone || '0128 266 2870' }}</a>
+      <a [href]="'https://wa.me/' + settings?.whatsapp" target="_blank">{{ isAr ? 'واتساب على نفس الرقم' : 'WhatsApp same number' }}</a>
+      <a [href]="'mailto:' + settings?.email">{{ settings?.email }}</a>
+      <a [href]="settings?.maps_url" target="_blank" rel="noopener">{{ isAr ? settings?.address_ar : settings?.address_en }}</a>
+    </div>
+
+    <!-- Privacy -->
+    <div class="footer-privacy">
+      <span class="footer-heading">{{ isAr ? 'سرية وأمان' : 'Privacy & Safety' }}</span>
+      <p>{{ isAr ? 'نلتزم بسرية تامة في كل تفاصيل التواصل والعلاج. بياناتك وحديثك معنا لا تُشارك مع أي جهة دون موافقتك.' : 'We maintain complete confidentiality in all communication and treatment details. Your data is never shared without your consent.' }}</p>
+      <a [routerLink]="prefix + '/contact'" class="footer-cta">{{ isAr ? 'اطلب استشارة أولية' : 'Request Initial Consultation' }}</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>© {{ year }} {{ isAr ? 'رحلة التعافي للطب النفسي وعلاج الإدمان. جميع الحقوق محفوظة.' : 'Recovery Journey. All rights reserved.' }}</span>
+      <span class="footer-links">
+        <a href="#">{{ isAr ? 'سياسة الخصوصية' : 'Privacy Policy' }}</a>
+        <a href="#">{{ isAr ? 'شروط الاستخدام' : 'Terms' }}</a>
+      </span>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp -->
+  <a [href]="'https://wa.me/' + settings?.whatsapp" target="_blank" rel="noopener" class="wa-float" [attr.aria-label]="isAr ? 'تحدّث معنا على واتساب' : 'Chat on WhatsApp'">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 10c0 3 2 5 5 5l1-1.5-2-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2z"/></svg>
+    {{ isAr ? 'تحدّث معنا بسرية' : 'Chat confidentially' }}
+  </a>
+</footer>

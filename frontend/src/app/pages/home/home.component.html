@@ -1,0 +1,181 @@
+<div [dir]="isAr ? 'rtl' : 'ltr'" class="page-home">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <span class="hero-badge">{{ isAr ? 'مركز متخصص في الطب النفسي وعلاج الإدمان — منذ 2001' : 'Specialized Psychiatry & Addiction Center — since 2001' }}</span>
+        <h1 class="hero-title">
+          {{ isAr ? 'أنت الحكاية…' : 'You are the story…' }}<br>
+          <span class="hero-title-gold">{{ isAr ? 'أنت البداية' : 'You are the beginning' }}</span>
+        </h1>
+        <p class="hero-lead">{{ isAr ? 'خطوة واحدة، بسرية تامة، تجاه فهم ما تمرّ به.' : 'One step, in complete privacy, toward understanding what you\'re going through.' }}</p>
+        <p class="hero-desc">{{ isAr ? 'كل حالة مختلفة عن الأخرى، ولهذا لا نتعامل مع المرضى بنفس الخطة. نبدأ بفحوصات وتقييم دقيق، ثم نضع برنامجًا مصممًا خصيصًا لاحتياجك.' : 'Every case is different. We start with thorough assessments and design a personalized program for your specific needs.' }}</p>
+        <div class="hero-actions">
+          <a [routerLink]="prefix + '/contact'" class="btn-gold">{{ isAr ? 'احجز تقييمك السري الآن' : 'Book Your Confidential Assessment Now' }}</a>
+          <a [href]="'tel:+' + settings?.phone" class="btn-outline">{{ isAr ? 'تحدّث معنا الآن — المكالمة سرية' : 'Talk to us now — Confidential call' }}</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="photo-placeholder">{{ isAr ? '[صورة حقيقية للمركز — الحديقة أو الواجهة]' : '[Center photo — garden or facade]' }}</div>
+        <div class="stats-row">
+          <div class="stat-card"><span class="stat-num">2001</span><span class="stat-label">{{ isAr ? 'خبرة منذ' : 'Expert since' }}</span></div>
+          <div class="stat-card"><span class="stat-num">25</span><span class="stat-label">{{ isAr ? 'سريرًا' : 'Beds' }}</span></div>
+          <div class="stat-card"><span class="stat-num">{{ isAr ? 'فاخرة' : 'Luxury' }}</span><span class="stat-label">{{ isAr ? 'إقامة كاملة' : 'Full residence' }}</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust bar -->
+  <section class="trust-bar">
+    <div class="container trust-inner">
+      <div class="trust-item" *ngFor="let t of trustItems"><span class="diamond">◆</span>{{ t }}</div>
+    </div>
+  </section>
+
+  <!-- About snippet -->
+  <section class="about-section">
+    <div class="container about-grid">
+      <div class="about-left">
+        <span class="eyebrow">{{ isAr ? 'من نحن' : 'About Us' }}</span>
+        <h2>{{ isAr ? 'خبرة منذ عام 2001 في الطب النفسي وعلاج الإدمان' : 'Expert since 2001 in Psychiatry & Addiction Treatment' }}</h2>
+        <p>{{ isAr ? 'نؤمن بأن كل إنسان يستحق فرصة حقيقية لبداية جديدة. نعمل من خلال منظومة متكاملة تجمع بين الرعاية الطبية، والدعم النفسي، والتأهيل السلوكي، في بيئة آمنة وداعمة.' : 'We believe every person deserves a real chance at a new beginning. We work through an integrated system combining medical care, psychological support, and behavioral rehabilitation.' }}</p>
+        <div class="room-placeholder">{{ isAr ? '[صورة الغرف أو المساحات الداخلية]' : '[Room or interior photo]' }}</div>
+      </div>
+      <div class="about-right">
+        <div class="card-vision">
+          <span class="eyebrow gold">{{ isAr ? 'رؤيتنا' : 'Our Vision' }}</span>
+          <h3>{{ isAr ? 'تعافي المرضى وعائلاتهم وأصدقائهم.' : 'Recovery of patients and their families.' }}</h3>
+          <p>{{ isAr ? 'التعافي الحقيقي لا يقتصر على المريض وحده، فالإدمان والاضطرابات النفسية تمتد آثارها إلى الأسرة والمحيطين.' : 'True recovery is not just for the patient — addiction and mental disorders affect the family too.' }}</p>
+        </div>
+        <div class="card-philosophy">
+          <span class="eyebrow gold-light">{{ isAr ? 'فلسفتنا' : 'Our Philosophy' }}</span>
+          <h3>{{ isAr ? 'رحلة التعافي هي بداية حياتك الجديدة.' : 'The recovery journey is the beginning of your new life.' }}</h3>
+          <p>{{ isAr ? 'لا ننظر إلى العلاج باعتباره مجرد توقف عن التعاطي، بل نراه بداية لمرحلة جديدة من الوعي والنضج والاختيار.' : 'We see treatment not as just stopping use, but as the beginning of a new phase of awareness, maturity, and choice.' }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">{{ isAr ? 'خدماتنا' : 'Our Services' }}</span>
+        <h2>{{ isAr ? 'رعاية علاجية متخصصة لكل حالة' : 'Specialized Treatment for Every Case' }}</h2>
+        <p>{{ isAr ? 'نقدم خدمة علاجية متميزة للاضطرابات التالية، ضمن خطة فردية تُبنى على تقييم دقيق.' : 'We offer distinguished treatment for the following conditions, within an individualized plan based on thorough assessment.' }}</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" *ngFor="let s of services">
+          <span>{{ isAr ? s.name_ar : s.name_en }}</span>
+          <span class="code-badge" dir="ltr">{{ s.code }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Therapies -->
+  <section class="therapies-section">
+    <div class="container therapies-grid">
+      <div class="therapies-left">
+        <span class="eyebrow">{{ isAr ? 'التقنيات والفلسفات العلاجية' : 'Therapeutic Approaches' }}</span>
+        <h2>{{ isAr ? 'مناهج علاجية معتمدة، نختار منها ما يناسب حالتك' : 'Evidence-based approaches, tailored to your case' }}</h2>
+      </div>
+      <div class="therapies-list">
+        <div class="therapy-card" *ngFor="let t of therapies">
+          <span>{{ isAr ? t.name_ar : t.name_en }}</span>
+          <span class="therapy-code" dir="ltr">{{ t.code }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey steps -->
+  <section class="journey-section">
+    <div class="container">
+      <div class="section-head light">
+        <span class="eyebrow light">{{ isAr ? 'رحلة العلاج' : 'The Journey' }}</span>
+        <h2>{{ isAr ? 'ست خطوات، تبدأ بمكالمة واحدة' : 'Six steps, starting with one call' }}</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card" *ngFor="let s of steps">
+          <span class="step-num">{{ s.num }}</span>
+          <span class="step-title">{{ isAr ? s.titleAr : s.titleEn }}</span>
+          <span class="step-desc">{{ isAr ? s.descAr : s.descEn }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Family section -->
+  <section class="family-section">
+    <div class="container family-grid">
+      <div>
+        <span class="eyebrow">{{ isAr ? 'كلمة للعائلة' : 'For the Family' }}</span>
+        <h2>{{ isAr ? 'نحن نفهم قلقكم' : 'We understand your concern' }}</h2>
+        <p>{{ isAr ? 'عندما يمرّ أحد أفراد الأسرة بإدمان أو اضطراب نفسي، تكون الأسرة كلها في حالة قلق وحيرة. نحن هنا لنشرح لكم ما يحدث.' : 'When a family member goes through addiction or a mental disorder, the whole family is in anxiety. We\'re here to explain.' }}</p>
+        <div class="privacy-note">
+          <h3>{{ isAr ? 'خصوصية المريض لا تتعارض مع دعمكم' : 'Patient privacy does not conflict with your support' }}</h3>
+          <p>{{ isAr ? 'مشاركتكم في الرحلة لا تعني معرفة كل التفاصيل. نحرص على توازن دقيق: أن تشعروا بأنكم جزء من العلاج.' : 'Your involvement in the journey does not mean knowing every detail. We maintain a careful balance.' }}</p>
+        </div>
+        <a [routerLink]="prefix + '/family'" class="btn-navy">{{ isAr ? 'اقرأ المزيد للعائلة' : 'Read more for families' }}</a>
+      </div>
+      <div class="family-steps">
+        <div class="family-step" *ngFor="let s of familySteps; let i = index">
+          <span class="family-num">{{ i + 1 }}</span>
+          <span>{{ isAr ? s.ar : s.en }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container faq-inner">
+      <div class="section-head center">
+        <span class="eyebrow">{{ isAr ? 'الأسئلة الشائعة' : 'FAQ' }}</span>
+        <h2>{{ isAr ? 'إجابات واضحة قبل الخطوة الأولى' : 'Clear answers before the first step' }}</h2>
+      </div>
+      <div class="faqs-list">
+        <details class="faq-item" *ngFor="let f of faqs">
+          <summary class="faq-q">
+            {{ isAr ? f.question_ar : f.question_en }}
+            <span class="faq-plus">+</span>
+          </summary>
+          <div class="faq-a">{{ isAr ? f.answer_ar : f.answer_en }}</div>
+        </details>
+      </div>
+      <div class="faq-more">
+        <a [routerLink]="prefix + '/faq'" class="btn-navy">{{ isAr ? 'عرض جميع الأسئلة' : 'View all questions' }}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact form section -->
+  <section class="contact-section">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <span class="eyebrow light">{{ isAr ? 'تواصل معنا' : 'Contact Us' }}</span>
+        <h2>{{ isAr ? 'تكفي مكالمة أولى سرية' : 'One confidential call is enough' }}</h2>
+        <p>{{ isAr ? 'نستمع فيها إلى حالتك، ونوضح لك الخطوات التالية. الخصوصية مضمونة من أول اتصال.' : 'We listen to your situation and explain the next steps. Privacy is guaranteed from the first call.' }}</p>
+        <div class="contact-links" *ngIf="settings">
+          <a [href]="'tel:+' + settings.phone" class="contact-link">
+            <span>{{ isAr ? 'اتصل بنا — المكالمة سرية' : 'Call us — Confidential' }}</span>
+            <span class="contact-link-val" dir="ltr">{{ settings.phone }}</span>
+          </a>
+          <a [href]="'https://wa.me/' + settings.whatsapp" class="contact-link">
+            <span>WhatsApp</span>
+            <span class="contact-link-val" dir="ltr">{{ settings.phone }}</span>
+          </a>
+          <a [href]="'mailto:' + settings.email" class="contact-link">
+            <span>{{ isAr ? 'البريد الإلكتروني' : 'Email' }}</span>
+            <span class="contact-link-val" dir="ltr">{{ settings.email }}</span>
+          </a>
+        </div>
+      </div>
+      <app-contact-form [lang]="lang.lang" [settings]="settings"></app-contact-form>
+    </div>
+  </section>
+
+</div>

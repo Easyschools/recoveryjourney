@@ -1,0 +1,38 @@
+<div [dir]="isAr ? 'rtl' : 'ltr'" class="page-content">
+  <div class="page-hero"><div class="container">
+    <nav class="breadcrumb"><a [routerLink]="prefix || '/'">{{ isAr ? 'الرئيسية' : 'Home' }}</a> / <span>{{ isAr ? 'خدماتنا' : 'Services' }}</span></nav>
+    <h1>{{ isAr ? 'خدماتنا' : 'Our Services' }}</h1>
+    <p>{{ isAr ? 'رعاية علاجية متخصصة لكل حالة' : 'Specialized treatment care for every case' }}</p>
+  </div></div>
+
+  <div class="container page-body">
+    <div class="section-head"><span class="eyebrow">{{ isAr ? 'الحالات التي نعالجها' : 'Conditions We Treat' }}</span>
+      <h2>{{ isAr ? 'رعاية علاجية متخصصة لكل حالة' : 'Specialized Treatment for Every Case' }}</h2>
+      <p>{{ isAr ? 'نقدم خدمة علاجية متميزة للاضطرابات التالية، ضمن خطة فردية تُبنى على تقييم دقيق.' : 'We offer distinguished treatment within an individualized plan based on thorough assessment.' }}</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" *ngFor="let s of services">
+        <span>{{ isAr ? s.name_ar : s.name_en }}</span>
+        <span class="code-badge" dir="ltr">{{ s.code }}</span>
+      </div>
+    </div>
+
+    <div class="family-banner">
+      <div><h3>{{ isAr ? 'دعم الأسرة' : 'Family Support' }}</h3>
+        <p>{{ isAr ? 'جلسات وإرشادات مخصصة لأسرة المريض، تساعدها على فهم ما يحدث، وكيفية المساندة.' : 'Dedicated sessions and guidance for the patient\'s family to understand what\'s happening and how to support.' }}</p>
+      </div>
+      <a [routerLink]="prefix + '/family'" class="btn-gold">{{ isAr ? 'كلمة للعائلة' : 'For the Family' }}</a>
+    </div>
+
+    <div class="section-head" style="margin-top:64px"><span class="eyebrow">{{ isAr ? 'التقنيات والفلسفات العلاجية' : 'Therapeutic Approaches' }}</span>
+      <h2>{{ isAr ? 'مناهج علاجية معتمدة' : 'Evidence-Based Approaches' }}</h2>
+    </div>
+    <div class="therapies-list">
+      <div class="therapy-card" *ngFor="let t of therapies">
+        <span>{{ isAr ? t.name_ar : t.name_en }}</span>
+        <span class="therapy-code" dir="ltr">{{ t.code }}</span>
+      </div>
+    </div>
+  </div>
+  <app-cta-band [lang]="lang.lang"></app-cta-band>
+</div>

@@ -1,0 +1,50 @@
+<form [formGroup]="form" (ngSubmit)="submit()" [dir]="isAr ? 'rtl' : 'ltr'" class="contact-form">
+  <div class="form-title">{{ isAr ? 'اطلب استشارة أولية' : 'Request Initial Consultation' }}</div>
+  <p class="form-sub">{{ isAr ? 'بياناتك لا تُشارك مع أي جهة. سنتواصل معك بسرية تامة.' : 'Your data is never shared. We\'ll contact you in full confidentiality.' }}</p>
+
+  <!-- Honeypot -->
+  <input formControlName="website" type="text" style="display:none" tabindex="-1" autocomplete="off">
+
+  <label>
+    <span>{{ isAr ? 'الاسم (اختياري)' : 'Name (optional)' }}</span>
+    <input formControlName="name" type="text" [placeholder]="isAr ? 'يمكنك استخدام اسم مستعار' : 'You can use a pseudonym'">
+  </label>
+
+  <label>
+    <span>{{ isAr ? 'رقم الهاتف' : 'Phone Number' }} <em>*</em></span>
+    <input formControlName="phone" type="tel" dir="ltr" [placeholder]="isAr ? '01x xxxx xxxx' : '01x xxxx xxxx'"
+           [class.invalid]="submitted && form.get('phone')?.invalid">
+    <small *ngIf="submitted && form.get('phone')?.invalid" class="err">
+      {{ isAr ? 'يرجى إدخال رقم هاتف صحيح' : 'Please enter a valid phone number' }}
+    </small>
+  </label>
+
+  <label>
+    <span>{{ isAr ? 'الاستشارة بخصوص' : 'Consultation about' }}</span>
+    <select formControlName="consultation_for">
+      <option value="self">{{ isAr ? 'نفسي' : 'Myself' }}</option>
+      <option value="family">{{ isAr ? 'أحد أفراد أسرتي' : 'A family member' }}</option>
+      <option value="friend">{{ isAr ? 'صديق أو شخص أهتم بأمره' : 'A friend or someone I care about' }}</option>
+    </select>
+  </label>
+
+  <label>
+    <span>{{ isAr ? 'رسالتك (اختياري)' : 'Message (optional)' }}</span>
+    <textarea formControlName="message" rows="3" [placeholder]="isAr ? 'اكتب ما تحب أن تشاركه معنا' : 'Write what you\'d like to share'"></textarea>
+  </label>
+
+  <div *ngIf="success" class="success-msg">
+    {{ isAr ? 'شكرًا لك، سنتواصل معك بسرية خلال وقت قصير.' : 'Thank you, we\'ll contact you confidentially shortly.' }}
+  </div>
+  <div *ngIf="error" class="error-msg">
+    {{ isAr ? 'حدث خطأ، يرجى المحاولة مرة أخرى.' : 'An error occurred, please try again.' }}
+  </div>
+
+  <button type="submit" [disabled]="loading" class="submit-btn">
+    {{ loading ? (isAr ? '...' : '...') : (isAr ? 'اطلب موعدك الآن بسرية كاملة' : 'Book Your Appointment Confidentially') }}
+  </button>
+
+  <a [href]="waUrl" target="_blank" rel="noopener" class="wa-alt">
+    {{ isAr ? 'أرسل عبر واتساب بدلاً من ذلك' : 'Send via WhatsApp instead' }}
+  </a>
+</form>

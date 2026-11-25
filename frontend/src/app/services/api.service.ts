@@ -1,0 +1,35 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
+
+@Injectable({ providedIn: 'root' })
+export class ApiService {
+  private base = environment.apiUrl;
+
+  constructor(private http: HttpClient) {}
+
+  getPage(slug: string): Observable<any> {
+    return this.http.get(`${this.base}/pages/${slug}`);
+  }
+
+  getFaqs(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.base}/faqs`);
+  }
+
+  getServices(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.base}/services`);
+  }
+
+  getTeam(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.base}/team`);
+  }
+
+  getSettings(): Observable<any> {
+    return this.http.get(`${this.base}/settings/public`);
+  }
+
+  submitContact(data: any): Observable<any> {
+    return this.http.post(`${this.base}/contact`, data);
+  }
+}
