@@ -28,8 +28,8 @@
       <h2 class="section-title">{{ isAr ? 'أعضاء الفريق' : 'Team Members' }}</h2>
       <div class="members-grid">
         <div class="member-card" *ngFor="let m of members">
-          <div class="member-photo" *ngIf="m.photo"><img [src]="'/api/storage/' + m.photo" [alt]="isAr ? m.name_ar : m.name_en"></div>
-          <div class="member-photo placeholder" *ngIf="!m.photo">{{ isAr ? '[صورة الطبيب]' : '[Doctor photo]' }}</div>
+          <div class="member-photo" *ngIf="m.photo_url"><img [src]="m.photo_url" [alt]="isAr ? m.name_ar : m.name_en"></div>
+          <div class="member-photo placeholder" *ngIf="!m.photo_url">{{ isAr ? '[صورة الطبيب]' : '[Doctor photo]' }}</div>
           <div class="member-name">{{ isAr ? m.name_ar : m.name_en }}</div>
           <div class="member-role">{{ isAr ? m.role_ar : m.role_en }}</div>
           <p *ngIf="m.bio_ar || m.bio_en">{{ isAr ? m.bio_ar : m.bio_en }}</p>

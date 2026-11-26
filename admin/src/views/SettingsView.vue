@@ -20,7 +20,7 @@
     <div class="card">
       <h3 style="font-size:16px;margin-bottom:20px">تتبع وتحليل (Tracking)</h3>
       <div class="form-row">
-        <div class="form-group"><label class="form-label">Google Analytics ID</label><input v-model="s.google_analytics_id" class="form-control" dir="ltr" placeholder="G-XXXXXXXXXX" /></div>
+        <div class="form-group"><label class="form-label">Google Analytics ID</label><input v-model="s.ga4_id" class="form-control" dir="ltr" placeholder="G-XXXXXXXXXX" /></div>
         <div class="form-group"><label class="form-label">Meta Pixel ID</label><input v-model="s.meta_pixel_id" class="form-control" dir="ltr" /></div>
       </div>
       <div class="form-group"><label class="form-label">TikTok Pixel ID</label><input v-model="s.tiktok_pixel_id" class="form-control" dir="ltr" /></div>

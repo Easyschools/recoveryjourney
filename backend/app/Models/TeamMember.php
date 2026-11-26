@@ -12,4 +12,11 @@ class TeamMember extends Model
     ];
 
     protected $casts = ['is_active' => 'boolean'];
+
+    protected $appends = ['photo_url'];
+
+    public function getPhotoUrlAttribute(): ?string
+    {
+        return $this->photo ? asset('storage/' . $this->photo) : null;
+    }
 }

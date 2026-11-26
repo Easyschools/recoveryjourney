@@ -32,7 +32,16 @@ import api from '../services/api'
 
 const submissions = ref([])
 onMounted(load)
-async function load() { const r = await api.getSubmissions(); submissions.value = r.data }
+async function load() {
+  const all = []
+  let page = 1, last = 1
+  do {
+    const { data } = await api.getSubmissions(page)
+    all.push(...data.data)
+    last = data.last_page
+  } while (++page <= last)
+  submissions.value = all
+}
 
 async function markRead(s) { await api.markRead(s.id); s.is_read = true }
 async function del(s) {

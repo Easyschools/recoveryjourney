@@ -69,15 +69,17 @@ function openForm(m) {
 async function save() {
   saving.value = true
   const fd = new FormData()
-  Object.entries(form.value).forEach(([k,v]) => v !== null && v !== undefined && fd.append(k, v))
+  Object.entries(form.value).forEach(([k,v]) => {
+    if (['photo', 'photo_url'].includes(k) || v === null || v === undefined) return
+    fd.append(k, typeof v === 'boolean' ? Number(v) : v)
+  })
   if (photoFile.value) fd.append('photo', photoFile.value)
-  if (form.value.id) fd.append('_method', 'PUT')
   try {
     if (form.value.id) await api.updateMember(form.value.id, fd)
     else await api.createMember(fd)
     form.value = null; await load()
     msg.value = { type:'ok', text:'تم الحفظ' }; setTimeout(() => msg.value=null, 3000)
-  } catch { msg.value = { type:'err', text:'حدث خطأ' } }
+  } catch (e) { msg.value = { type:'err', text: e.response?.data?.message || 'حدث خطأ' } }
   finally { saving.value = false }
 }
 

@@ -65,7 +65,8 @@ const saving = ref(false), saved = ref(false), saveErr = ref('')
 
 onMounted(async () => {
   const slugs = ['home','about','services','detox','team','journey','family','faq','contact']
-  pages.value = await Promise.all(slugs.map(s => api.getPage(s).then(r => r.data).catch(() => ({ slug: s, title_ar: s, is_published: false }))))
+  const { data } = await api.getPages()
+  pages.value = data.sort((a, b) => slugs.indexOf(a.slug) - slugs.indexOf(b.slug))
 })
 
 function edit(p) { editing.value = { ...p }; tab.value = 'ar'; saved.value = false; saveErr.value = '' }
@@ -82,7 +83,8 @@ const contentEnStr = computed({
 async function save() {
   saving.value = true; saved.value = false; saveErr.value = ''
   try {
-    await api.updatePage(editing.value.slug, editing.value)
+    const { data } = await api.updatePage(editing.value.slug, editing.value)
+    Object.assign(pages.value.find(p => p.slug === data.slug), data)
     saved.value = true
     setTimeout(() => saved.value = false, 3000)
   } catch (e) { saveErr.value = e.response?.data?.message || 'خطأ في الحفظ' }
