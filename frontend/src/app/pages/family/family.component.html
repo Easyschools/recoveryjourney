@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-    <div class="photo-box" style="margin-top:40px">{{ isAr ? '[صورة للعائلة]' : '[Family photo]' }}</div>
+    <app-site-image slot="family_session" style="display:block;margin-top:40px" [label]="isAr ? 'صورة للعائلة' : 'Family photo'"></app-site-image>
   </div>
   <app-cta-band [lang]="lang.lang"></app-cta-band>
 </div>

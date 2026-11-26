@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="hero-visual">
-        <div class="photo-placeholder">{{ isAr ? '[صورة حقيقية للمركز — الحديقة أو الواجهة]' : '[Center photo — garden or facade]' }}</div>
+        <app-site-image slot="home_facade" boxClass="photo-placeholder" style="display:block" [label]="isAr ? 'صورة حقيقية للمركز — الحديقة أو الواجهة' : 'Center photo — garden or facade'"></app-site-image>
         <div class="stats-row">
           <div class="stat-card"><span class="stat-num">2001</span><span class="stat-label">{{ isAr ? 'خبرة منذ' : 'Expert since' }}</span></div>
           <div class="stat-card"><span class="stat-num">25</span><span class="stat-label">{{ isAr ? 'سريرًا' : 'Beds' }}</span></div>
@@ -41,7 +41,7 @@
         <span class="eyebrow">{{ isAr ? 'من نحن' : 'About Us' }}</span>
         <h2>{{ isAr ? 'خبرة منذ عام 2001 في الطب النفسي وعلاج الإدمان' : 'Expert since 2001 in Psychiatry & Addiction Treatment' }}</h2>
         <p>{{ isAr ? 'نؤمن بأن كل إنسان يستحق فرصة حقيقية لبداية جديدة. نعمل من خلال منظومة متكاملة تجمع بين الرعاية الطبية، والدعم النفسي، والتأهيل السلوكي، في بيئة آمنة وداعمة.' : 'We believe every person deserves a real chance at a new beginning. We work through an integrated system combining medical care, psychological support, and behavioral rehabilitation.' }}</p>
-        <div class="room-placeholder">{{ isAr ? '[صورة الغرف أو المساحات الداخلية]' : '[Room or interior photo]' }}</div>
+        <app-site-image slot="home_rooms" boxClass="room-placeholder" style="display:block" [label]="isAr ? 'صورة الغرف أو المساحات الداخلية' : 'Room or interior photo'"></app-site-image>
       </div>
       <div class="about-right">
         <div class="card-vision">

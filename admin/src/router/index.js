@@ -11,6 +11,7 @@ const routes = [
       { path: 'pages', component: () => import('../views/PagesView.vue') },
       { path: 'faqs', component: () => import('../views/FaqsView.vue') },
       { path: 'team', component: () => import('../views/TeamView.vue') },
+      { path: 'images', component: () => import('../views/ImagesView.vue') },
       { path: 'services', component: () => import('../views/ServicesView.vue') },
       { path: 'settings', component: () => import('../views/SettingsView.vue') },
       { path: 'submissions', component: () => import('../views/SubmissionsView.vue') },

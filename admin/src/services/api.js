@@ -49,6 +49,11 @@ export default {
   updateService: (id, data) => http.put(`/admin/services/${id}`, data),
   deleteService: id => http.delete(`/admin/services/${id}`),
 
+  // Site photos
+  getImages: () => http.get('/images'),
+  uploadImage: (slot, formData) => http.post(`/admin/images/${slot}`, formData, { headers: { 'Content-Type': 'multipart/form-data' } }),
+  deleteImage: slot => http.delete(`/admin/images/${slot}`),
+
   // Settings
   getSettings: () => http.get('/admin/settings'),
   updateSettings: settings => http.put('/admin/settings', { settings }),

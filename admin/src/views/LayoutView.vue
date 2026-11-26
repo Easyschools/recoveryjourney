@@ -21,7 +21,7 @@
       <header class="topbar">
         <h1>{{ currentTitle }}</h1>
         <div class="topbar-actions">
-          <a href="http://localhost:4200" target="_blank" class="btn btn-ghost btn-sm">عرض الموقع ↗</a>
+          <a :href="siteUrl" target="_blank" class="btn btn-ghost btn-sm">عرض الموقع ↗</a>
         </div>
       </header>
       <main class="page-content">
@@ -36,6 +36,7 @@ import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useAuthStore } from '../stores/auth'
 
+const siteUrl = import.meta.env.VITE_SITE_URL || 'http://localhost:4200'
 const route = useRoute()
 const router = useRouter()
 const auth = useAuthStore()
@@ -44,11 +45,12 @@ const nav = [
   { to: '/pages', icon: '📄', label: 'المحتوى (الصفحات)' },
   { to: '/faqs', icon: '❓', label: 'الأسئلة الشائعة' },
   { to: '/team', icon: '👥', label: 'الفريق' },
+  { to: '/images', icon: '🖼️', label: 'صور الموقع' },
   { to: '/services', icon: '🩺', label: 'الخدمات والعلاجات' },
   { to: '/settings', icon: '⚙️', label: 'الإعدادات العامة' },
   { to: '/submissions', icon: '📬', label: 'رسائل التواصل' },
 ]
-const titles = { '/pages': 'المحتوى', '/faqs': 'الأسئلة الشائعة', '/team': 'الفريق', '/services': 'الخدمات', '/settings': 'الإعدادات', '/submissions': 'رسائل التواصل' }
+const titles = { '/pages': 'المحتوى', '/faqs': 'الأسئلة الشائعة', '/team': 'الفريق', '/services': 'الخدمات', '/images': 'صور الموقع', '/settings': 'الإعدادات', '/submissions': 'رسائل التواصل' }
 const currentTitle = computed(() => titles[route.path] || 'لوحة التحكم')
 
 async function logout() {

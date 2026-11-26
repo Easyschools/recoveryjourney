@@ -21,7 +21,7 @@
         <p class="muted-light">{{ isAr ? 'سحب السموم مرحلة أولى ضرورية، لكنها ليست العلاج الكامل. هي الخطوة التي تمهّد لبدء رحلة علاجية أعمق، نفسية وسلوكية.' : 'Detox is a necessary first phase, but not the complete treatment. It is the step that paves the way for a deeper psychological and behavioral treatment journey.' }}</p>
       </div>
     </div>
-    <div class="photo-box" style="margin-top:40px">{{ isAr ? '[صورة مركز سحب السموم]' : '[Detox center photo]' }}</div>
+    <app-site-image slot="detox_center" style="display:block;margin-top:40px" [label]="isAr ? 'صورة مركز سحب السموم' : 'Detox center photo'"></app-site-image>
   </div>
   <app-cta-band [lang]="lang.lang"></app-cta-band>
 </div>

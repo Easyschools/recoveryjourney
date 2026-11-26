@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\FaqController;
+use App\Http\Controllers\Api\ImageController;
 use App\Http\Controllers\Api\PageController;
 use App\Http\Controllers\Api\ServiceController;
 use App\Http\Controllers\Api\SettingsController;
@@ -15,6 +16,7 @@ Route::get('/pages/{slug}', [PageController::class, 'show']);
 Route::get('/faqs', [FaqController::class, 'index']);
 Route::get('/services', [ServiceController::class, 'index']);
 Route::get('/team', [TeamController::class, 'index']);
+Route::get('/images', [ImageController::class, 'index']);
 Route::get('/settings/public', [SettingsController::class, 'index']);
 
 // Auth
@@ -51,6 +53,10 @@ Route::middleware(['auth:sanctum'])->prefix('admin')->group(function () {
     // Settings
     Route::get('/settings', [SettingsController::class, 'index']);
     Route::put('/settings', [SettingsController::class, 'update']);
+
+    // Site photos
+    Route::post('/images/{slot}', [ImageController::class, 'store']);
+    Route::delete('/images/{slot}', [ImageController::class, 'destroy']);
 
     // Contact submissions
     Route::get('/contacts', [ContactController::class, 'index']);

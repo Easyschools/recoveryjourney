@@ -1,13 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { catchError, Observable, of, shareReplay } from 'rxjs';
 import { environment } from '../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
   private base = environment.apiUrl;
 
+  private images$?: Observable<Record<string, string | null>>;
+
   constructor(private http: HttpClient) {}
+
+  getImages(): Observable<Record<string, string | null>> {
+    return this.images$ ??= this.http.get<Record<string, string | null>>(`${this.base}/images`).pipe(
+      catchError(() => of({})),
+      shareReplay(1),
+    );
+  }
 
   getPage(slug: string): Observable<any> {
     return this.http.get(`${this.base}/pages/${slug}`);

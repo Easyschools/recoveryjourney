@@ -20,6 +20,9 @@ class SettingsController extends Controller
         ]);
 
         foreach ($data['settings'] as $key => $value) {
+            if (str_starts_with($key, 'image_')) {
+                continue;
+            }
             SiteSetting::set($key, $value);
         }
 
