@@ -18,6 +18,10 @@ export class ApiService {
     );
   }
 
+  getPages(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.base}/pages`).pipe(catchError(() => of([])));
+  }
+
   getPage(slug: string): Observable<any> {
     return this.http.get(`${this.base}/pages/${slug}`);
   }

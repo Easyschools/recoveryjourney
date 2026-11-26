@@ -1,35 +1,35 @@
 <div [dir]="isAr ? 'rtl' : 'ltr'" class="page-content">
   <div class="page-hero"><div class="container">
     <nav class="breadcrumb"><a [routerLink]="prefix || '/'">{{ isAr ? 'الرئيسية' : 'Home' }}</a> / <span>{{ isAr ? 'فريق العمل' : 'Our Team' }}</span></nav>
-    <h1>{{ isAr ? 'فريق العمل' : 'Our Team' }}</h1>
-    <p>{{ isAr ? 'فريق متكامل، لا أفراد متفرقون' : 'An integrated team, not scattered individuals' }}</p>
+    <h1>{{ cms.text('team.t01', isAr ? 'فريق العمل' : 'Our Team') }}</h1>
+    <p>{{ cms.text('team.t02', isAr ? 'فريق متكامل، لا أفراد متفرقون' : 'An integrated team, not scattered individuals') }}</p>
   </div></div>
 
   <div class="container page-body">
     <div class="two-col">
       <div>
-        <span class="eyebrow">{{ isAr ? 'فريق العمل' : 'Our Team' }}</span>
-        <h2>{{ isAr ? 'فريق متكامل، لا أفراد متفرقون' : 'An integrated team' }}</h2>
-        <p>{{ isAr ? 'لا يتعامل المريض مع طبيب واحد بمعزل عن غيره. فريقنا يضم أطباء نفسيين، وأطباء متخصصين في علاج الإدمان، وأخصائيين نفسيين، وطاقم تمريض مدرّب.' : 'The patient doesn\'t deal with one doctor in isolation. Our team includes psychiatrists, addiction specialists, psychologists, and trained nursing staff.' }}</p>
+        <span class="eyebrow">{{ cms.text('team.t03', isAr ? 'فريق العمل' : 'Our Team') }}</span>
+        <h2>{{ cms.text('team.t04', isAr ? 'فريق متكامل، لا أفراد متفرقون' : 'An integrated team') }}</h2>
+        <p>{{ cms.text('team.t05', isAr ? 'لا يتعامل المريض مع طبيب واحد بمعزل عن غيره. فريقنا يضم أطباء نفسيين، وأطباء متخصصين في علاج الإدمان، وأخصائيين نفسيين، وطاقم تمريض مدرّب.' : 'The patient doesn\'t deal with one doctor in isolation. Our team includes psychiatrists, addiction specialists, psychologists, and trained nursing staff.') }}</p>
         <div class="card-white highlight">
-          <div class="highlight-title">{{ isAr ? 'خطة واحدة، يتفق عليها الجميع' : 'One plan, agreed by everyone' }}</div>
-          <p>{{ isAr ? 'كل التخصصات تجتمع حول خطة علاج واحدة لكل مريض، تُبنى على نتائج التقييم والفحوصات، وتُعدَّل كلما تغيّرت احتياجات الحالة.' : 'All specialties meet around one treatment plan per patient, built on assessment results, adjusted as the case\'s needs change.' }}</p>
+          <div class="highlight-title">{{ cms.text('team.t06', isAr ? 'خطة واحدة، يتفق عليها الجميع' : 'One plan, agreed by everyone') }}</div>
+          <p>{{ cms.text('team.t07', isAr ? 'كل التخصصات تجتمع حول خطة علاج واحدة لكل مريض، تُبنى على نتائج التقييم والفحوصات، وتُعدَّل كلما تغيّرت احتياجات الحالة.' : 'All specialties meet around one treatment plan per patient, built on assessment results, adjusted as the case\'s needs change.') }}</p>
         </div>
       </div>
       <div class="roles-grid">
-        <div class="role-card" *ngFor="let r of roles">
-          <div class="role-title">{{ isAr ? r.titleAr : r.titleEn }}</div>
-          <div class="role-desc">{{ isAr ? r.descAr : r.descEn }}</div>
+        <div class="role-card" *ngFor="let r of roles; let i = index">
+          <div class="role-title">{{ cms.text('team.roles' + i + '_title', isAr ? r.titleAr : r.titleEn) }}</div>
+          <div class="role-desc">{{ cms.text('team.roles' + i + '_desc', isAr ? r.descAr : r.descEn) }}</div>
         </div>
       </div>
     </div>
 
     <div *ngIf="members.length > 0" style="margin-top: 64px">
-      <h2 class="section-title">{{ isAr ? 'أعضاء الفريق' : 'Team Members' }}</h2>
+      <h2 class="section-title">{{ cms.text('team.t08', isAr ? 'أعضاء الفريق' : 'Team Members') }}</h2>
       <div class="members-grid">
         <div class="member-card" *ngFor="let m of members">
           <div class="member-photo" *ngIf="m.photo_url"><img [src]="m.photo_url" [alt]="isAr ? m.name_ar : m.name_en"></div>
-          <div class="member-photo placeholder" *ngIf="!m.photo_url">{{ isAr ? '[صورة الطبيب]' : '[Doctor photo]' }}</div>
+          <div class="member-photo placeholder" *ngIf="!m.photo_url">{{ cms.text('team.t09', isAr ? '[صورة الطبيب]' : '[Doctor photo]') }}</div>
           <div class="member-name">{{ isAr ? m.name_ar : m.name_en }}</div>
           <div class="member-role">{{ isAr ? m.role_ar : m.role_en }}</div>
           <p *ngIf="m.bio_ar || m.bio_en">{{ isAr ? m.bio_ar : m.bio_en }}</p>

@@ -1,0 +1,795 @@
+{
+ "home": [
+  {
+   "key": "t01",
+   "ar": "مركز متخصص في الطب النفسي وعلاج الإدمان — منذ 2001",
+   "en": "Specialized Psychiatry & Addiction Center — since 2001"
+  },
+  {
+   "key": "t02",
+   "ar": "أنت الحكاية…",
+   "en": "You are the story…"
+  },
+  {
+   "key": "t03",
+   "ar": "أنت البداية",
+   "en": "You are the beginning"
+  },
+  {
+   "key": "t04",
+   "ar": "خطوة واحدة، بسرية تامة، تجاه فهم ما تمرّ به.",
+   "en": "One step, in complete privacy, toward understanding what you're going through."
+  },
+  {
+   "key": "t05",
+   "ar": "كل حالة مختلفة عن الأخرى، ولهذا لا نتعامل مع المرضى بنفس الخطة. نبدأ بفحوصات وتقييم دقيق، ثم نضع برنامجًا مصممًا خصيصًا لاحتياجك.",
+   "en": "Every case is different. We start with thorough assessments and design a personalized program for your specific needs."
+  },
+  {
+   "key": "t06",
+   "ar": "احجز تقييمك السري الآن",
+   "en": "Book Your Confidential Assessment Now"
+  },
+  {
+   "key": "t07",
+   "ar": "تحدّث معنا الآن — المكالمة سرية",
+   "en": "Talk to us now — Confidential call"
+  },
+  {
+   "key": "t08",
+   "ar": "خبرة منذ",
+   "en": "Expert since"
+  },
+  {
+   "key": "t09",
+   "ar": "سريرًا",
+   "en": "Beds"
+  },
+  {
+   "key": "t10",
+   "ar": "فاخرة",
+   "en": "Luxury"
+  },
+  {
+   "key": "t11",
+   "ar": "إقامة كاملة",
+   "en": "Full residence"
+  },
+  {
+   "key": "t12",
+   "ar": "من نحن",
+   "en": "About Us"
+  },
+  {
+   "key": "t13",
+   "ar": "خبرة منذ عام 2001 في الطب النفسي وعلاج الإدمان",
+   "en": "Expert since 2001 in Psychiatry & Addiction Treatment"
+  },
+  {
+   "key": "t14",
+   "ar": "نؤمن بأن كل إنسان يستحق فرصة حقيقية لبداية جديدة. نعمل من خلال منظومة متكاملة تجمع بين الرعاية الطبية، والدعم النفسي، والتأهيل السلوكي، في بيئة آمنة وداعمة.",
+   "en": "We believe every person deserves a real chance at a new beginning. We work through an integrated system combining medical care, psychological support, and behavioral rehabilitation."
+  },
+  {
+   "key": "t15",
+   "ar": "رؤيتنا",
+   "en": "Our Vision"
+  },
+  {
+   "key": "t16",
+   "ar": "تعافي المرضى وعائلاتهم وأصدقائهم.",
+   "en": "Recovery of patients and their families."
+  },
+  {
+   "key": "t17",
+   "ar": "التعافي الحقيقي لا يقتصر على المريض وحده، فالإدمان والاضطرابات النفسية تمتد آثارها إلى الأسرة والمحيطين.",
+   "en": "True recovery is not just for the patient — addiction and mental disorders affect the family too."
+  },
+  {
+   "key": "t18",
+   "ar": "فلسفتنا",
+   "en": "Our Philosophy"
+  },
+  {
+   "key": "t19",
+   "ar": "رحلة التعافي هي بداية حياتك الجديدة.",
+   "en": "The recovery journey is the beginning of your new life."
+  },
+  {
+   "key": "t20",
+   "ar": "لا ننظر إلى العلاج باعتباره مجرد توقف عن التعاطي، بل نراه بداية لمرحلة جديدة من الوعي والنضج والاختيار.",
+   "en": "We see treatment not as just stopping use, but as the beginning of a new phase of awareness, maturity, and choice."
+  },
+  {
+   "key": "t21",
+   "ar": "خدماتنا",
+   "en": "Our Services"
+  },
+  {
+   "key": "t22",
+   "ar": "رعاية علاجية متخصصة لكل حالة",
+   "en": "Specialized Treatment for Every Case"
+  },
+  {
+   "key": "t23",
+   "ar": "نقدم خدمة علاجية متميزة للاضطرابات التالية، ضمن خطة فردية تُبنى على تقييم دقيق.",
+   "en": "We offer distinguished treatment for the following conditions, within an individualized plan based on thorough assessment."
+  },
+  {
+   "key": "t24",
+   "ar": "التقنيات والفلسفات العلاجية",
+   "en": "Therapeutic Approaches"
+  },
+  {
+   "key": "t25",
+   "ar": "مناهج علاجية معتمدة، نختار منها ما يناسب حالتك",
+   "en": "Evidence-based approaches, tailored to your case"
+  },
+  {
+   "key": "t26",
+   "ar": "رحلة العلاج",
+   "en": "The Journey"
+  },
+  {
+   "key": "t27",
+   "ar": "ست خطوات، تبدأ بمكالمة واحدة",
+   "en": "Six steps, starting with one call"
+  },
+  {
+   "key": "t28",
+   "ar": "كلمة للعائلة",
+   "en": "For the Family"
+  },
+  {
+   "key": "t29",
+   "ar": "نحن نفهم قلقكم",
+   "en": "We understand your concern"
+  },
+  {
+   "key": "t30",
+   "ar": "عندما يمرّ أحد أفراد الأسرة بإدمان أو اضطراب نفسي، تكون الأسرة كلها في حالة قلق وحيرة. نحن هنا لنشرح لكم ما يحدث.",
+   "en": "When a family member goes through addiction or a mental disorder, the whole family is in anxiety. We're here to explain."
+  },
+  {
+   "key": "t31",
+   "ar": "خصوصية المريض لا تتعارض مع دعمكم",
+   "en": "Patient privacy does not conflict with your support"
+  },
+  {
+   "key": "t32",
+   "ar": "مشاركتكم في الرحلة لا تعني معرفة كل التفاصيل. نحرص على توازن دقيق: أن تشعروا بأنكم جزء من العلاج.",
+   "en": "Your involvement in the journey does not mean knowing every detail. We maintain a careful balance."
+  },
+  {
+   "key": "t33",
+   "ar": "اقرأ المزيد للعائلة",
+   "en": "Read more for families"
+  },
+  {
+   "key": "t34",
+   "ar": "الأسئلة الشائعة",
+   "en": "FAQ"
+  },
+  {
+   "key": "t35",
+   "ar": "إجابات واضحة قبل الخطوة الأولى",
+   "en": "Clear answers before the first step"
+  },
+  {
+   "key": "t36",
+   "ar": "عرض جميع الأسئلة",
+   "en": "View all questions"
+  },
+  {
+   "key": "t37",
+   "ar": "تواصل معنا",
+   "en": "Contact Us"
+  },
+  {
+   "key": "t38",
+   "ar": "تكفي مكالمة أولى سرية",
+   "en": "One confidential call is enough"
+  },
+  {
+   "key": "t39",
+   "ar": "نستمع فيها إلى حالتك، ونوضح لك الخطوات التالية. الخصوصية مضمونة من أول اتصال.",
+   "en": "We listen to your situation and explain the next steps. Privacy is guaranteed from the first call."
+  },
+  {
+   "key": "t40",
+   "ar": "اتصل بنا — المكالمة سرية",
+   "en": "Call us — Confidential"
+  },
+  {
+   "key": "t41",
+   "ar": "البريد الإلكتروني",
+   "en": "Email"
+  },
+  {
+   "key": "steps0_title",
+   "ar": "مكالمة سرية",
+   "en": "Confidential Call"
+  },
+  {
+   "key": "steps0_desc",
+   "ar": "تبدأ الرحلة بمكالمة هاتفية بسيطة، لا يُطلب فيها من المريض أو أسرته سوى التحدث بصراحة. هذه المكالمة سرية بالكامل.",
+   "en": "The journey begins with a simple phone call. All that is asked is to speak honestly. This call is completely confidential."
+  },
+  {
+   "key": "steps1_title",
+   "ar": "التقييم والفحوصات",
+   "en": "Assessment & Tests"
+  },
+  {
+   "key": "steps1_desc",
+   "ar": "يأتي المريض لتقييم شامل، يشمل فحوصات وتحاليل طبية ونفسية، لفهم حالته من كل الجوانب.",
+   "en": "The patient receives a comprehensive assessment including medical and psychological tests to understand their condition from all angles."
+  },
+  {
+   "key": "steps2_title",
+   "ar": "وضع الخطة العلاجية",
+   "en": "Treatment Plan"
+  },
+  {
+   "key": "steps2_desc",
+   "ar": "بناءً على نتائج التقييم، يضع الفريق الطبي خطة علاج مصممة خصيصًا لهذه الحالة.",
+   "en": "Based on assessment results, the medical team creates a treatment plan specifically designed for this case."
+  },
+  {
+   "key": "steps3_title",
+   "ar": "بدء العلاج",
+   "en": "Begin Treatment"
+  },
+  {
+   "key": "steps3_desc",
+   "ar": "يبدأ المريض برنامجه، سواء تضمّن سحب سموم أو لم يتضمّن، مع متابعة يومية من الفريق المختص.",
+   "en": "The patient starts their program, with or without detox, with daily follow-up from the specialized team."
+  },
+  {
+   "key": "steps4_title",
+   "ar": "مشاركة الأسرة",
+   "en": "Family Involvement"
+  },
+  {
+   "key": "steps4_desc",
+   "ar": "بالتوازي مع علاج المريض، نُشرك الأسرة بالقدر والشكل المناسبين، بما يدعم المريض دون المساس بخصوصيته.",
+   "en": "In parallel with the patient's treatment, we involve the family in an appropriate way that supports the patient without compromising privacy."
+  },
+  {
+   "key": "steps5_title",
+   "ar": "المتابعة بعد البرنامج",
+   "en": "After-Program Follow-up"
+  },
+  {
+   "key": "steps5_desc",
+   "ar": "بعد انتهاء البرنامج، يستمر التواصل بيننا وبين المريض، لمساعدته على تثبيت ما حققه.",
+   "en": "After the program ends, we continue communicating with the patient to help them maintain their achievements."
+  },
+  {
+   "key": "familySteps0",
+   "ar": "نُطلعكم على الخطوط العامة للخطة العلاجية، بما لا يتعارض مع خصوصية المريض.",
+   "en": "We brief you on the general treatment plan without compromising patient privacy."
+  },
+  {
+   "key": "familySteps1",
+   "ar": "نوفر جلسات إرشادية خاصة بكم، تساعدكم على فهم طبيعة الإدمان أو الاضطراب النفسي.",
+   "en": "We provide counseling sessions specifically for you to understand the nature of addiction or the mental disorder."
+  },
+  {
+   "key": "familySteps2",
+   "ar": "نحدد معكم أفضل شكل للتواصل مع المريض أثناء فترة العلاج.",
+   "en": "We determine with you the best way to communicate with the patient during treatment."
+  },
+  {
+   "key": "familySteps3",
+   "ar": "نبقى على تواصل منتظم معكم لمتابعة سير الأمور.",
+   "en": "We stay in regular contact with you to follow up on how things are going."
+  },
+  {
+   "key": "trust0",
+   "ar": "خبرة ممتدة منذ 2001",
+   "en": "Experience since 2001"
+  },
+  {
+   "key": "trust1",
+   "ar": "سرية تامة في كل تفاصيل التواصل والعلاج",
+   "en": "Full confidentiality"
+  },
+  {
+   "key": "trust2",
+   "ar": "فحوصات وتحاليل طبية شاملة",
+   "en": "Comprehensive medical tests"
+  },
+  {
+   "key": "trust3",
+   "ar": "مركز سحب سموم تحت إشراف طبي متخصص",
+   "en": "Medically supervised detox center"
+  },
+  {
+   "key": "trust4",
+   "ar": "خطة علاج فردية لكل حالة",
+   "en": "Individual treatment plan"
+  },
+  {
+   "key": "trust5",
+   "ar": "متابعة مستمرة بعد انتهاء البرنامج",
+   "en": "Continuous post-program follow-up"
+  }
+ ],
+ "about": [
+  {
+   "key": "t01",
+   "ar": "من نحن",
+   "en": "About Us"
+  },
+  {
+   "key": "t02",
+   "ar": "مركز متخصص في الطب النفسي وعلاج الإدمان منذ 2001",
+   "en": "Specialized psychiatry & addiction treatment center since 2001"
+  },
+  {
+   "key": "t03",
+   "ar": "من نحن",
+   "en": "Who We Are"
+  },
+  {
+   "key": "t04",
+   "ar": "خبرة منذ عام 2001 في الطب النفسي وعلاج الإدمان",
+   "en": "Expert since 2001 in Psychiatry & Addiction"
+  },
+  {
+   "key": "t05",
+   "ar": "نؤمن بأن كل إنسان يستحق فرصة حقيقية لبداية جديدة. نعمل من خلال منظومة متكاملة تجمع بين الرعاية الطبية، والدعم النفسي، والتأهيل السلوكي، في بيئة آمنة وداعمة تحفظ كرامة الإنسان وتدعم قدرته على التغيير.",
+   "en": "We believe every person deserves a real chance at a new beginning. We work through an integrated system combining medical care, psychological support, and behavioral rehabilitation."
+  },
+  {
+   "key": "t06",
+   "ar": "رؤيتنا",
+   "en": "Our Vision"
+  },
+  {
+   "key": "t07",
+   "ar": "تعافي المرضى وعائلاتهم وأصدقائهم.",
+   "en": "Recovery of patients and their families."
+  },
+  {
+   "key": "t08",
+   "ar": "التعافي الحقيقي لا يقتصر على المريض وحده، فالإدمان والاضطرابات النفسية تمتد آثارها إلى الأسرة والمحيطين به. لذلك نبني رحلة تعافٍ متكاملة.",
+   "en": "True recovery extends beyond the patient alone. Addiction and mental disorders affect family and those around them. So we build a comprehensive recovery journey."
+  },
+  {
+   "key": "t09",
+   "ar": "فلسفتنا",
+   "en": "Our Philosophy"
+  },
+  {
+   "key": "t10",
+   "ar": "رحلة التعافي هي بداية حياتك الجديدة.",
+   "en": "The recovery journey is the beginning of your new life."
+  },
+  {
+   "key": "t11",
+   "ar": "لا ننظر إلى العلاج باعتباره مجرد توقف عن التعاطي أو السيطرة على الأعراض، بل نراه بداية لمرحلة جديدة من الوعي والنضج والاختيار.",
+   "en": "We see treatment not as just stopping use, but as the beginning of a new phase of awareness, maturity, and choice."
+  }
+ ],
+ "services": [
+  {
+   "key": "t01",
+   "ar": "خدماتنا",
+   "en": "Our Services"
+  },
+  {
+   "key": "t02",
+   "ar": "رعاية علاجية متخصصة لكل حالة",
+   "en": "Specialized treatment care for every case"
+  },
+  {
+   "key": "t03",
+   "ar": "الحالات التي نعالجها",
+   "en": "Conditions We Treat"
+  },
+  {
+   "key": "t04",
+   "ar": "رعاية علاجية متخصصة لكل حالة",
+   "en": "Specialized Treatment for Every Case"
+  },
+  {
+   "key": "t05",
+   "ar": "نقدم خدمة علاجية متميزة للاضطرابات التالية، ضمن خطة فردية تُبنى على تقييم دقيق.",
+   "en": "We offer distinguished treatment within an individualized plan based on thorough assessment."
+  },
+  {
+   "key": "t06",
+   "ar": "دعم الأسرة",
+   "en": "Family Support"
+  },
+  {
+   "key": "t07",
+   "ar": "جلسات وإرشادات مخصصة لأسرة المريض، تساعدها على فهم ما يحدث، وكيفية المساندة.",
+   "en": "Dedicated sessions and guidance for the patient's family to understand what's happening and how to support."
+  },
+  {
+   "key": "t08",
+   "ar": "كلمة للعائلة",
+   "en": "For the Family"
+  },
+  {
+   "key": "t09",
+   "ar": "التقنيات والفلسفات العلاجية",
+   "en": "Therapeutic Approaches"
+  },
+  {
+   "key": "t10",
+   "ar": "مناهج علاجية معتمدة",
+   "en": "Evidence-Based Approaches"
+  }
+ ],
+ "detox": [
+  {
+   "key": "t01",
+   "ar": "مركز سحب السموم",
+   "en": "Detox Center"
+  },
+  {
+   "key": "t02",
+   "ar": "تحت إشراف طبي متخصص على مدار الساعة",
+   "en": "Under specialized medical supervision around the clock"
+  },
+  {
+   "key": "t03",
+   "ar": "مركز سحب السموم",
+   "en": "Detox Center"
+  },
+  {
+   "key": "t04",
+   "ar": "لماذا تحتاج هذه المرحلة إشرافًا طبيًا؟",
+   "en": "Why does this phase need medical supervision?"
+  },
+  {
+   "key": "t05",
+   "ar": "التوقف عن مادة الإدمان قد يصاحبه أعراض جسدية ونفسية متفاوتة الشدة. لهذا لا نترك هذه المرحلة للصدفة أو للإرادة وحدها؛ بل تتم داخل مركز مخصص، تحت متابعة طبية لصيقة.",
+   "en": "Stopping an addictive substance may be accompanied by physical and psychological symptoms of varying severity. That is why we don't leave this phase to chance or willpower alone."
+  },
+  {
+   "key": "t06",
+   "ar": "الفحوصات قبل البدء",
+   "en": "Pre-Detox Assessment"
+  },
+  {
+   "key": "t07",
+   "ar": "قبل بدء سحب السموم، يخضع المريض لفحوصات وتحاليل طبية تحدد حالته الصحية العامة، ونوع المادة، ومدة الاستخدام، حتى تُبنى خطة السحب على أساس دقيق.",
+   "en": "Before detox begins, the patient undergoes medical tests that determine their general health, the substance type, and duration of use."
+  },
+  {
+   "key": "t08",
+   "ar": "المتابعة أثناء المرحلة",
+   "en": "During Detox"
+  },
+  {
+   "key": "t09",
+   "ar": "طوال فترة سحب السموم، يتابع الفريق الطبي المريض عن قرب، ويُجري ما يلزم من فحوصات إضافية، مع تعديل الخطة كلما احتاج الأمر.",
+   "en": "Throughout detox, the medical team closely monitors the patient and performs additional tests as needed, adjusting the plan whenever necessary."
+  },
+  {
+   "key": "t10",
+   "ar": "توضيح مهم",
+   "en": "Important Note"
+  },
+  {
+   "key": "t11",
+   "ar": "سحب السموم مرحلة أولى ضرورية، لكنها ليست العلاج الكامل. هي الخطوة التي تمهّد لبدء رحلة علاجية أعمق، نفسية وسلوكية.",
+   "en": "Detox is a necessary first phase, but not the complete treatment. It is the step that paves the way for a deeper psychological and behavioral treatment journey."
+  }
+ ],
+ "team": [
+  {
+   "key": "t01",
+   "ar": "فريق العمل",
+   "en": "Our Team"
+  },
+  {
+   "key": "t02",
+   "ar": "فريق متكامل، لا أفراد متفرقون",
+   "en": "An integrated team, not scattered individuals"
+  },
+  {
+   "key": "t03",
+   "ar": "فريق العمل",
+   "en": "Our Team"
+  },
+  {
+   "key": "t04",
+   "ar": "فريق متكامل، لا أفراد متفرقون",
+   "en": "An integrated team"
+  },
+  {
+   "key": "t05",
+   "ar": "لا يتعامل المريض مع طبيب واحد بمعزل عن غيره. فريقنا يضم أطباء نفسيين، وأطباء متخصصين في علاج الإدمان، وأخصائيين نفسيين، وطاقم تمريض مدرّب.",
+   "en": "The patient doesn't deal with one doctor in isolation. Our team includes psychiatrists, addiction specialists, psychologists, and trained nursing staff."
+  },
+  {
+   "key": "t06",
+   "ar": "خطة واحدة، يتفق عليها الجميع",
+   "en": "One plan, agreed by everyone"
+  },
+  {
+   "key": "t07",
+   "ar": "كل التخصصات تجتمع حول خطة علاج واحدة لكل مريض، تُبنى على نتائج التقييم والفحوصات، وتُعدَّل كلما تغيّرت احتياجات الحالة.",
+   "en": "All specialties meet around one treatment plan per patient, built on assessment results, adjusted as the case's needs change."
+  },
+  {
+   "key": "t08",
+   "ar": "أعضاء الفريق",
+   "en": "Team Members"
+  },
+  {
+   "key": "t09",
+   "ar": "[صورة الطبيب]",
+   "en": "[Doctor photo]"
+  },
+  {
+   "key": "roles0_title",
+   "ar": "الأطباء النفسيون",
+   "en": "Psychiatrists"
+  },
+  {
+   "key": "roles0_desc",
+   "ar": "يتابعون الجانب النفسي والدوائي إن استدعت الحالة ذلك.",
+   "en": "Follow up on the psychological and medication aspects when needed."
+  },
+  {
+   "key": "roles1_title",
+   "ar": "أطباء علاج الإدمان",
+   "en": "Addiction Physicians"
+  },
+  {
+   "key": "roles1_desc",
+   "ar": "يشرفون على مرحلة سحب السموم والمتابعة الطبية للمريض.",
+   "en": "Oversee the detox phase and medical monitoring."
+  },
+  {
+   "key": "roles2_title",
+   "ar": "الأخصائيون النفسيون",
+   "en": "Psychologists"
+  },
+  {
+   "key": "roles2_desc",
+   "ar": "يقودون الجلسات الفردية والجماعية، ويساعدون المريض على فهم نفسه أكثر.",
+   "en": "Lead individual and group sessions."
+  },
+  {
+   "key": "roles3_title",
+   "ar": "الإشراف الداخلي",
+   "en": "Internal Supervision"
+  },
+  {
+   "key": "roles3_desc",
+   "ar": "متواجد على مدار الساعة لمتابعة الحالة الصحية، خاصة خلال مرحلة سحب السموم.",
+   "en": "Available 24/7 to monitor health status, especially during detox."
+  }
+ ],
+ "journey": [
+  {
+   "key": "t01",
+   "ar": "رحلة العلاج",
+   "en": "The Treatment Journey"
+  },
+  {
+   "key": "t02",
+   "ar": "ست خطوات، تبدأ بمكالمة واحدة",
+   "en": "Six steps, starting with one call"
+  },
+  {
+   "key": "t03",
+   "ar": "رحلة العلاج",
+   "en": "The Journey"
+  },
+  {
+   "key": "t04",
+   "ar": "ست خطوات، تبدأ بمكالمة واحدة",
+   "en": "Six steps, starting with one call"
+  },
+  {
+   "key": "steps0_title",
+   "ar": "مكالمة سرية",
+   "en": "Confidential Call"
+  },
+  {
+   "key": "steps0_desc",
+   "ar": "تبدأ الرحلة بمكالمة هاتفية بسيطة، لا يُطلب فيها من المريض أو أسرته سوى التحدث بصراحة عمّا يمرون به. هذه المكالمة سرية بالكامل.",
+   "en": "The journey begins with a simple phone call. All that is asked is to speak honestly about what they are going through. This call is completely confidential."
+  },
+  {
+   "key": "steps1_title",
+   "ar": "التقييم والفحوصات",
+   "en": "Assessment & Tests"
+  },
+  {
+   "key": "steps1_desc",
+   "ar": "يأتي المريض لتقييم شامل، يشمل فحوصات وتحاليل طبية ونفسية، لفهم حالته من كل الجوانب.",
+   "en": "The patient comes for a comprehensive assessment including medical and psychological tests to understand their condition from all angles."
+  },
+  {
+   "key": "steps2_title",
+   "ar": "وضع الخطة العلاجية",
+   "en": "Treatment Plan"
+  },
+  {
+   "key": "steps2_desc",
+   "ar": "بناءً على نتائج التقييم، يضع الفريق الطبي خطة علاج مصممة خصيصًا لهذه الحالة، تحدد نوع البرنامج والمدة والخدمات اللازمة.",
+   "en": "Based on assessment results, the medical team creates a customized treatment plan specifying the program type, duration, and required services."
+  },
+  {
+   "key": "steps3_title",
+   "ar": "بدء العلاج",
+   "en": "Begin Treatment"
+  },
+  {
+   "key": "steps3_desc",
+   "ar": "يبدأ المريض برنامجه، سواء تضمّن سحب سموم أو لم يتضمّن، مع متابعة يومية من الفريق المختص.",
+   "en": "The patient starts their program, with or without detox, with daily follow-up from the specialized team."
+  },
+  {
+   "key": "steps4_title",
+   "ar": "مشاركة الأسرة",
+   "en": "Family Involvement"
+  },
+  {
+   "key": "steps4_desc",
+   "ar": "بالتوازي مع علاج المريض، نُشرك الأسرة بالقدر والشكل المناسبين، بما يدعم المريض دون المساس بخصوصيته.",
+   "en": "In parallel with the patient's treatment, we involve the family appropriately to support the patient without compromising privacy."
+  },
+  {
+   "key": "steps5_title",
+   "ar": "المتابعة بعد البرنامج",
+   "en": "After-Program Follow-up"
+  },
+  {
+   "key": "steps5_desc",
+   "ar": "بعد انتهاء البرنامج، يستمر التواصل بيننا وبين المريض، لمساعدته على تثبيت ما حققه، والتعامل مع أي تحديات بعد العودة إلى حياته اليومية.",
+   "en": "After the program ends, we continue communicating with the patient to help them maintain their achievements and handle challenges in daily life."
+  }
+ ],
+ "family": [
+  {
+   "key": "t01",
+   "ar": "كلمة للعائلة",
+   "en": "For the Family"
+  },
+  {
+   "key": "t02",
+   "ar": "نحن نفهم قلقكم ونحن هنا للمساعدة",
+   "en": "We understand your concern and we're here to help"
+  },
+  {
+   "key": "t03",
+   "ar": "كلمة للعائلة",
+   "en": "For the Family"
+  },
+  {
+   "key": "t04",
+   "ar": "نحن نفهم قلقكم",
+   "en": "We understand your concern"
+  },
+  {
+   "key": "t05",
+   "ar": "عندما يمرّ أحد أفراد الأسرة بإدمان أو اضطراب نفسي، تكون الأسرة كلها في حالة قلق وحيرة. نحن هنا لنشرح لكم ما يحدث، ونساعدكم على فهم كيف يمكنكم المساندة دون أن يتحول قلقكم إلى ضغط إضافي على المريض.",
+   "en": "When a family member goes through addiction or a mental disorder, the whole family is in anxiety. We're here to explain and help you understand how to support without adding pressure."
+  },
+  {
+   "key": "t06",
+   "ar": "خصوصية المريض لا تتعارض مع دعمكم",
+   "en": "Patient privacy does not conflict with your support"
+  },
+  {
+   "key": "t07",
+   "ar": "مشاركتكم في الرحلة لا تعني معرفة كل التفاصيل. نحرص على توازن دقيق: أن تشعروا بأنكم جزء من العلاج، وأن يشعر المريض في الوقت نفسه بأن مساحته الخاصة محفوظة.",
+   "en": "Your participation in the journey does not mean knowing every detail. We maintain a careful balance."
+  },
+  {
+   "key": "t08",
+   "ar": "كيف نُشرككم في الرحلة؟",
+   "en": "How do we involve you in the journey?"
+  },
+  {
+   "key": "steps0",
+   "ar": "نُطلعكم على الخطوط العامة للخطة العلاجية، بما لا يتعارض مع خصوصية المريض.",
+   "en": "We brief you on the general treatment plan without compromising patient privacy."
+  },
+  {
+   "key": "steps1",
+   "ar": "نوفر جلسات إرشادية خاصة بكم، تساعدكم على فهم طبيعة الإدمان أو الاضطراب النفسي.",
+   "en": "We provide counseling sessions to help you understand addiction or the mental disorder."
+  },
+  {
+   "key": "steps2",
+   "ar": "نحدد معكم أفضل شكل للتواصل مع المريض أثناء فترة العلاج.",
+   "en": "We determine the best way to communicate with the patient during treatment."
+  },
+  {
+   "key": "steps3",
+   "ar": "نبقى على تواصل منتظم معكم لمتابعة سير الأمور، دون كشف تفاصيل يفضّل المريض إبقاءها خاصة.",
+   "en": "We stay in regular contact with you while respecting what the patient prefers to keep private."
+  }
+ ],
+ "faq": [
+  {
+   "key": "t01",
+   "ar": "الأسئلة الشائعة",
+   "en": "Frequently Asked Questions"
+  },
+  {
+   "key": "t02",
+   "ar": "إجابات واضحة قبل الخطوة الأولى",
+   "en": "Clear answers before the first step"
+  },
+  {
+   "key": "t03",
+   "ar": "جارٍ التحميل...",
+   "en": "Loading..."
+  }
+ ],
+ "contact": [
+  {
+   "key": "t01",
+   "ar": "الرئيسية",
+   "en": "Home"
+  },
+  {
+   "key": "t02",
+   "ar": "تواصل معنا",
+   "en": "Contact"
+  },
+  {
+   "key": "t03",
+   "ar": "تواصل معنا",
+   "en": "Contact Us"
+  },
+  {
+   "key": "t04",
+   "ar": "تكفي مكالمة أولى سرية",
+   "en": "One confidential call is enough"
+  },
+  {
+   "key": "t05",
+   "ar": "تواصل معنا",
+   "en": "Contact Us"
+  },
+  {
+   "key": "t06",
+   "ar": "تكفي مكالمة أولى سرية",
+   "en": "One confidential call is enough"
+  },
+  {
+   "key": "t07",
+   "ar": "نستمع فيها إلى حالتك أو حالة من تهتم بأمره، ونوضح لك الخطوات التالية. الخصوصية مضمونة من أول اتصال.",
+   "en": "We listen to your situation or someone you care about and explain the next steps. Privacy guaranteed from the first call."
+  },
+  {
+   "key": "t08",
+   "ar": "اتصل بنا — المكالمة سرية",
+   "en": "Call us — Confidential"
+  },
+  {
+   "key": "t09",
+   "ar": "البريد الإلكتروني",
+   "en": "Email"
+  },
+  {
+   "key": "t10",
+   "ar": "العنوان",
+   "en": "Address"
+  },
+  {
+   "key": "t11",
+   "ar": "افتح على الخريطة ←",
+   "en": "Open on map →"
+  },
+  {
+   "key": "t12",
+   "ar": "افتح الخريطة",
+   "en": "Open Map"
+  }
+ ]
+}

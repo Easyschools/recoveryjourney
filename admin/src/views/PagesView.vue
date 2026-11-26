@@ -4,12 +4,11 @@
       <div class="card">
         <div class="table-wrap">
           <table>
-            <thead><tr><th>الصفحة</th><th>Slug</th><th>حالة النشر</th><th></th></tr></thead>
+            <thead><tr><th>الصفحة</th><th>Slug</th><th></th></tr></thead>
             <tbody>
               <tr v-for="p in pages" :key="p.slug">
                 <td><strong>{{ p.title_ar || p.slug }}</strong><br><small style="opacity:.55">{{ p.title_en }}</small></td>
                 <td><code>{{ p.slug }}</code></td>
-                <td><span :class="['badge', p.is_published ? 'badge-green' : 'badge-gray']">{{ p.is_published ? 'منشور' : 'مسودة' }}</span></td>
                 <td><button class="btn btn-primary btn-sm" @click="edit(p)">تعديل</button></td>
               </tr>
             </tbody>
@@ -32,22 +31,25 @@
           <div :class="['lang-tab', tab==='en'?'active':'']" @click="tab='en'">English</div>
         </div>
 
-        <template v-if="tab==='ar'">
-          <div class="form-group"><label class="form-label">عنوان الصفحة (عربي)</label><input v-model="editing.title_ar" class="form-control" /></div>
-          <div class="form-group"><label class="form-label">وصف SEO (عربي)</label><textarea v-model="editing.meta_desc_ar" class="form-control" rows="2" /></div>
-          <div class="form-group"><label class="form-label">المحتوى JSON (عربي)</label><textarea v-model="contentArStr" class="form-control" rows="12" style="font-family:monospace;font-size:12px" /></div>
-        </template>
-        <template v-else>
-          <div class="form-group"><label class="form-label">Page Title (English)</label><input v-model="editing.title_en" class="form-control" /></div>
-          <div class="form-group"><label class="form-label">SEO Description (English)</label><textarea v-model="editing.meta_desc_en" class="form-control" rows="2" /></div>
-          <div class="form-group"><label class="form-label">Content JSON (English)</label><textarea v-model="contentEnStr" class="form-control" rows="12" style="font-family:monospace;font-size:12px" /></div>
-        </template>
-
         <div class="form-group">
-          <label style="display:flex;gap:8px;align-items:center;cursor:pointer">
-            <input type="checkbox" v-model="editing.is_published" /> منشور
-          </label>
+          <label class="form-label">{{ tab==='ar' ? 'عنوان تبويب المتصفح (عربي)' : 'Browser tab title (English)' }}</label>
+          <input v-model="editing[`title_${tab}`]" class="form-control" :dir="dir" />
         </div>
+        <div class="form-group">
+          <label class="form-label">{{ tab==='ar' ? 'وصف الصفحة في محركات البحث (عربي)' : 'Search description (English)' }}</label>
+          <textarea v-model="editing[`meta_desc_${tab}`]" class="form-control" rows="2" :dir="dir" />
+        </div>
+
+        <h3 style="font-size:15px;margin:24px 0 4px">نصوص الصفحة</h3>
+        <p style="font-size:13px;opacity:.6;margin-bottom:16px">لإرجاع النص الأصلي امسح الخانة ثم احفظ.</p>
+        <div v-for="(f, n) in fields[editing.slug]" :key="`${tab}-${f.key}`" class="form-group">
+          <label class="form-label">نص {{ n + 1 }}</label>
+          <textarea
+            :value="editing[`content_${tab}`][f.key] ?? f[tab]"
+            @input="editing[`content_${tab}`][f.key] = $event.target.value"
+            class="form-control" :dir="dir" :rows="f[tab].length > 90 ? 3 : 1" />
+        </div>
+
         <button class="btn btn-primary" :disabled="saving" @click="save">{{ saving ? 'جارٍ الحفظ...' : 'حفظ التغييرات' }}</button>
       </div>
     </div>
@@ -57,6 +59,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import api from '../services/api'
+import fields from '../pageFields.json'
 
 const pages = ref([])
 const editing = ref(null)
@@ -69,22 +72,28 @@ onMounted(async () => {
   pages.value = data.sort((a, b) => slugs.indexOf(a.slug) - slugs.indexOf(b.slug))
 })
 
-function edit(p) { editing.value = { ...p }; tab.value = 'ar'; saved.value = false; saveErr.value = '' }
+const dir = computed(() => tab.value === 'ar' ? 'rtl' : 'ltr')
 
-const contentArStr = computed({
-  get: () => JSON.stringify(editing.value?.content_ar ?? {}, null, 2),
-  set: v => { try { editing.value.content_ar = JSON.parse(v) } catch {} },
-})
-const contentEnStr = computed({
-  get: () => JSON.stringify(editing.value?.content_en ?? {}, null, 2),
-  set: v => { try { editing.value.content_en = JSON.parse(v) } catch {} },
-})
+function edit(p) {
+  // PHP returns an empty object as []
+  const content = c => Array.isArray(c) ? {} : { ...c }
+  editing.value = { ...p, content_ar: content(p.content_ar), content_en: content(p.content_en) }
+  tab.value = 'ar'; saved.value = false; saveErr.value = ''
+}
+
+function overrides(lang) {
+  const defaults = Object.fromEntries(fields[editing.value.slug].map(f => [f.key, f[lang]]))
+  return Object.fromEntries(Object.entries(editing.value[`content_${lang}`])
+    .filter(([k, v]) => v?.trim() && v !== defaults[k]))
+}
 
 async function save() {
   saving.value = true; saved.value = false; saveErr.value = ''
   try {
-    const { data } = await api.updatePage(editing.value.slug, editing.value)
+    const { data } = await api.updatePage(editing.value.slug, { ...editing.value, content_ar: overrides('ar'), content_en: overrides('en') })
     Object.assign(pages.value.find(p => p.slug === data.slug), data)
+    const current = tab.value
+    edit(data); tab.value = current
     saved.value = true
     setTimeout(() => saved.value = false, 3000)
   } catch (e) { saveErr.value = e.response?.data?.message || 'خطأ في الحفظ' }

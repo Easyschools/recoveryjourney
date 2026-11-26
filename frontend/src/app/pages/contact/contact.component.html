@@ -1,19 +1,19 @@
 <div [dir]="isAr ? 'rtl' : 'ltr'" class="page-content">
   <div class="page-hero dark"><div class="container">
-    <nav class="breadcrumb light"><a [routerLink]="prefix || '/'">{{ isAr ? 'الرئيسية' : 'Home' }}</a> / <span>{{ isAr ? 'تواصل معنا' : 'Contact' }}</span></nav>
-    <h1>{{ isAr ? 'تواصل معنا' : 'Contact Us' }}</h1>
-    <p>{{ isAr ? 'تكفي مكالمة أولى سرية' : 'One confidential call is enough' }}</p>
+    <nav class="breadcrumb light"><a [routerLink]="prefix || '/'">{{ cms.text('contact.t01', isAr ? 'الرئيسية' : 'Home') }}</a> / <span>{{ cms.text('contact.t02', isAr ? 'تواصل معنا' : 'Contact') }}</span></nav>
+    <h1>{{ cms.text('contact.t03', isAr ? 'تواصل معنا' : 'Contact Us') }}</h1>
+    <p>{{ cms.text('contact.t04', isAr ? 'تكفي مكالمة أولى سرية' : 'One confidential call is enough') }}</p>
   </div></div>
 
   <section class="contact-section-page">
     <div class="container contact-grid" *ngIf="settings">
       <div class="contact-info">
-        <span class="eyebrow light">{{ isAr ? 'تواصل معنا' : 'Contact Us' }}</span>
-        <h2>{{ isAr ? 'تكفي مكالمة أولى سرية' : 'One confidential call is enough' }}</h2>
-        <p>{{ isAr ? 'نستمع فيها إلى حالتك أو حالة من تهتم بأمره، ونوضح لك الخطوات التالية. الخصوصية مضمونة من أول اتصال.' : 'We listen to your situation or someone you care about and explain the next steps. Privacy guaranteed from the first call.' }}</p>
+        <span class="eyebrow light">{{ cms.text('contact.t05', isAr ? 'تواصل معنا' : 'Contact Us') }}</span>
+        <h2>{{ cms.text('contact.t06', isAr ? 'تكفي مكالمة أولى سرية' : 'One confidential call is enough') }}</h2>
+        <p>{{ cms.text('contact.t07', isAr ? 'نستمع فيها إلى حالتك أو حالة من تهتم بأمره، ونوضح لك الخطوات التالية. الخصوصية مضمونة من أول اتصال.' : 'We listen to your situation or someone you care about and explain the next steps. Privacy guaranteed from the first call.') }}</p>
         <div class="contact-links">
           <a [href]="'tel:+' + settings.phone" class="contact-link">
-            <span>{{ isAr ? 'اتصل بنا — المكالمة سرية' : 'Call us — Confidential' }}</span>
+            <span>{{ cms.text('contact.t08', isAr ? 'اتصل بنا — المكالمة سرية' : 'Call us — Confidential') }}</span>
             <span class="contact-link-val" dir="ltr">{{ settings.phone }}</span>
           </a>
           <a [href]="'https://wa.me/' + settings.whatsapp" target="_blank" class="contact-link">
@@ -21,19 +21,19 @@
             <span class="contact-link-val" dir="ltr">{{ settings.phone }}</span>
           </a>
           <a [href]="'mailto:' + settings.email" class="contact-link">
-            <span>{{ isAr ? 'البريد الإلكتروني' : 'Email' }}</span>
+            <span>{{ cms.text('contact.t09', isAr ? 'البريد الإلكتروني' : 'Email') }}</span>
             <span class="contact-link-val">{{ settings.email }}</span>
           </a>
           <a [href]="settings.maps_url" target="_blank" rel="noopener" class="contact-link contact-link-addr">
-            <span>{{ isAr ? 'العنوان' : 'Address' }}</span>
-            <span class="contact-link-val gold-text">{{ isAr ? 'افتح على الخريطة ←' : 'Open on map →' }}</span>
+            <span>{{ cms.text('contact.t10', isAr ? 'العنوان' : 'Address') }}</span>
+            <span class="contact-link-val gold-text">{{ cms.text('contact.t11', isAr ? 'افتح على الخريطة ←' : 'Open on map →') }}</span>
             <span class="contact-link-addr-text">{{ isAr ? settings.address_ar : settings.address_en }}</span>
           </a>
         </div>
         <!-- Map embed placeholder -->
         <div class="map-placeholder">
           <a [href]="settings.maps_url" target="_blank" rel="noopener">
-            {{ isAr ? 'افتح الخريطة' : 'Open Map' }}
+            {{ cms.text('contact.t12', isAr ? 'افتح الخريطة' : 'Open Map') }}
           </a>
         </div>
       </div>

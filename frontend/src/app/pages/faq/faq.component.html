@@ -1,8 +1,8 @@
 <div [dir]="isAr ? 'rtl' : 'ltr'" class="page-content">
   <div class="page-hero"><div class="container">
     <nav class="breadcrumb"><a [routerLink]="prefix || '/'">{{ isAr ? 'الرئيسية' : 'Home' }}</a> / <span>{{ isAr ? 'الأسئلة الشائعة' : 'FAQ' }}</span></nav>
-    <h1>{{ isAr ? 'الأسئلة الشائعة' : 'Frequently Asked Questions' }}</h1>
-    <p>{{ isAr ? 'إجابات واضحة قبل الخطوة الأولى' : 'Clear answers before the first step' }}</p>
+    <h1>{{ cms.text('faq.t01', isAr ? 'الأسئلة الشائعة' : 'Frequently Asked Questions') }}</h1>
+    <p>{{ cms.text('faq.t02', isAr ? 'إجابات واضحة قبل الخطوة الأولى' : 'Clear answers before the first step') }}</p>
   </div></div>
 
   <div class="container page-body" style="max-width:880px">
@@ -15,7 +15,7 @@
         <div class="faq-a">{{ isAr ? f.answer_ar : f.answer_en }}</div>
       </details>
     </div>
-    <p *ngIf="faqs.length === 0" class="loading-text">{{ isAr ? 'جارٍ التحميل...' : 'Loading...' }}</p>
+    <p *ngIf="faqs.length === 0" class="loading-text">{{ cms.text('faq.t03', isAr ? 'جارٍ التحميل...' : 'Loading...') }}</p>
   </div>
   <app-cta-band [lang]="lang.lang"></app-cta-band>
 </div>

@@ -13,6 +13,11 @@ class PageController extends Controller
         return Page::orderBy('slug')->get();
     }
 
+    public function published()
+    {
+        return Page::where('is_published', true)->get();
+    }
+
     public function show(string $slug)
     {
         $page = Page::where('slug', $slug)->where('is_published', true)->firstOrFail();

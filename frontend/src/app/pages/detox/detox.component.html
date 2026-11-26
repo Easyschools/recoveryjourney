@@ -1,24 +1,24 @@
 <div [dir]="isAr ? 'rtl' : 'ltr'" class="page-content">
   <div class="page-hero"><div class="container">
     <nav class="breadcrumb"><a [routerLink]="prefix || '/'">{{ isAr ? 'الرئيسية' : 'Home' }}</a> / <span>{{ isAr ? 'سحب السموم' : 'Detox' }}</span></nav>
-    <h1>{{ isAr ? 'مركز سحب السموم' : 'Detox Center' }}</h1>
-    <p>{{ isAr ? 'تحت إشراف طبي متخصص على مدار الساعة' : 'Under specialized medical supervision around the clock' }}</p>
+    <h1>{{ cms.text('detox.t01', isAr ? 'مركز سحب السموم' : 'Detox Center') }}</h1>
+    <p>{{ cms.text('detox.t02', isAr ? 'تحت إشراف طبي متخصص على مدار الساعة' : 'Under specialized medical supervision around the clock') }}</p>
   </div></div>
 
   <div class="container page-body">
-    <div class="section-head"><span class="eyebrow">{{ isAr ? 'مركز سحب السموم' : 'Detox Center' }}</span>
-      <h2>{{ isAr ? 'لماذا تحتاج هذه المرحلة إشرافًا طبيًا؟' : 'Why does this phase need medical supervision?' }}</h2>
-      <p>{{ isAr ? 'التوقف عن مادة الإدمان قد يصاحبه أعراض جسدية ونفسية متفاوتة الشدة. لهذا لا نترك هذه المرحلة للصدفة أو للإرادة وحدها؛ بل تتم داخل مركز مخصص، تحت متابعة طبية لصيقة.' : 'Stopping an addictive substance may be accompanied by physical and psychological symptoms of varying severity. That is why we don\'t leave this phase to chance or willpower alone.' }}</p>
+    <div class="section-head"><span class="eyebrow">{{ cms.text('detox.t03', isAr ? 'مركز سحب السموم' : 'Detox Center') }}</span>
+      <h2>{{ cms.text('detox.t04', isAr ? 'لماذا تحتاج هذه المرحلة إشرافًا طبيًا؟' : 'Why does this phase need medical supervision?') }}</h2>
+      <p>{{ cms.text('detox.t05', isAr ? 'التوقف عن مادة الإدمان قد يصاحبه أعراض جسدية ونفسية متفاوتة الشدة. لهذا لا نترك هذه المرحلة للصدفة أو للإرادة وحدها؛ بل تتم داخل مركز مخصص، تحت متابعة طبية لصيقة.' : 'Stopping an addictive substance may be accompanied by physical and psychological symptoms of varying severity. That is why we don\'t leave this phase to chance or willpower alone.') }}</p>
     </div>
     <div class="detox-cards">
-      <div class="card-white"><h3>{{ isAr ? 'الفحوصات قبل البدء' : 'Pre-Detox Assessment' }}</h3>
-        <p>{{ isAr ? 'قبل بدء سحب السموم، يخضع المريض لفحوصات وتحاليل طبية تحدد حالته الصحية العامة، ونوع المادة، ومدة الاستخدام، حتى تُبنى خطة السحب على أساس دقيق.' : 'Before detox begins, the patient undergoes medical tests that determine their general health, the substance type, and duration of use.' }}</p>
+      <div class="card-white"><h3>{{ cms.text('detox.t06', isAr ? 'الفحوصات قبل البدء' : 'Pre-Detox Assessment') }}</h3>
+        <p>{{ cms.text('detox.t07', isAr ? 'قبل بدء سحب السموم، يخضع المريض لفحوصات وتحاليل طبية تحدد حالته الصحية العامة، ونوع المادة، ومدة الاستخدام، حتى تُبنى خطة السحب على أساس دقيق.' : 'Before detox begins, the patient undergoes medical tests that determine their general health, the substance type, and duration of use.') }}</p>
       </div>
-      <div class="card-white"><h3>{{ isAr ? 'المتابعة أثناء المرحلة' : 'During Detox' }}</h3>
-        <p>{{ isAr ? 'طوال فترة سحب السموم، يتابع الفريق الطبي المريض عن قرب، ويُجري ما يلزم من فحوصات إضافية، مع تعديل الخطة كلما احتاج الأمر.' : 'Throughout detox, the medical team closely monitors the patient and performs additional tests as needed, adjusting the plan whenever necessary.' }}</p>
+      <div class="card-white"><h3>{{ cms.text('detox.t08', isAr ? 'المتابعة أثناء المرحلة' : 'During Detox') }}</h3>
+        <p>{{ cms.text('detox.t09', isAr ? 'طوال فترة سحب السموم، يتابع الفريق الطبي المريض عن قرب، ويُجري ما يلزم من فحوصات إضافية، مع تعديل الخطة كلما احتاج الأمر.' : 'Throughout detox, the medical team closely monitors the patient and performs additional tests as needed, adjusting the plan whenever necessary.') }}</p>
       </div>
-      <div class="card-navy"><h3 class="gold-text">{{ isAr ? 'توضيح مهم' : 'Important Note' }}</h3>
-        <p class="muted-light">{{ isAr ? 'سحب السموم مرحلة أولى ضرورية، لكنها ليست العلاج الكامل. هي الخطوة التي تمهّد لبدء رحلة علاجية أعمق، نفسية وسلوكية.' : 'Detox is a necessary first phase, but not the complete treatment. It is the step that paves the way for a deeper psychological and behavioral treatment journey.' }}</p>
+      <div class="card-navy"><h3 class="gold-text">{{ cms.text('detox.t10', isAr ? 'توضيح مهم' : 'Important Note') }}</h3>
+        <p class="muted-light">{{ cms.text('detox.t11', isAr ? 'سحب السموم مرحلة أولى ضرورية، لكنها ليست العلاج الكامل. هي الخطوة التي تمهّد لبدء رحلة علاجية أعمق، نفسية وسلوكية.' : 'Detox is a necessary first phase, but not the complete treatment. It is the step that paves the way for a deeper psychological and behavioral treatment journey.') }}</p>
       </div>
     </div>
     <app-site-image slot="detox_center" style="display:block;margin-top:40px" [label]="isAr ? 'صورة مركز سحب السموم' : 'Detox center photo'"></app-site-image>

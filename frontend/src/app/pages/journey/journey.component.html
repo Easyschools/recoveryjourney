@@ -1,20 +1,20 @@
 <div [dir]="isAr ? 'rtl' : 'ltr'" class="page-content">
   <div class="page-hero"><div class="container">
     <nav class="breadcrumb"><a [routerLink]="prefix || '/'">{{ isAr ? 'الرئيسية' : 'Home' }}</a> / <span>{{ isAr ? 'رحلة العلاج' : 'The Journey' }}</span></nav>
-    <h1>{{ isAr ? 'رحلة العلاج' : 'The Treatment Journey' }}</h1>
-    <p>{{ isAr ? 'ست خطوات، تبدأ بمكالمة واحدة' : 'Six steps, starting with one call' }}</p>
+    <h1>{{ cms.text('journey.t01', isAr ? 'رحلة العلاج' : 'The Treatment Journey') }}</h1>
+    <p>{{ cms.text('journey.t02', isAr ? 'ست خطوات، تبدأ بمكالمة واحدة' : 'Six steps, starting with one call') }}</p>
   </div></div>
 
   <section class="journey-dark-section">
     <div class="container">
-      <div class="section-head light"><span class="eyebrow light">{{ isAr ? 'رحلة العلاج' : 'The Journey' }}</span>
-        <h2>{{ isAr ? 'ست خطوات، تبدأ بمكالمة واحدة' : 'Six steps, starting with one call' }}</h2>
+      <div class="section-head light"><span class="eyebrow light">{{ cms.text('journey.t03', isAr ? 'رحلة العلاج' : 'The Journey') }}</span>
+        <h2>{{ cms.text('journey.t04', isAr ? 'ست خطوات، تبدأ بمكالمة واحدة' : 'Six steps, starting with one call') }}</h2>
       </div>
       <div class="steps-grid">
-        <div class="step-card" *ngFor="let s of steps">
+        <div class="step-card" *ngFor="let s of steps; let i = index">
           <span class="step-num">{{ s.num }}</span>
-          <span class="step-title">{{ isAr ? s.titleAr : s.titleEn }}</span>
-          <span class="step-desc">{{ isAr ? s.descAr : s.descEn }}</span>
+          <span class="step-title">{{ cms.text('journey.steps' + i + '_title', isAr ? s.titleAr : s.titleEn) }}</span>
+          <span class="step-desc">{{ cms.text('journey.steps' + i + '_desc', isAr ? s.descAr : s.descEn) }}</span>
         </div>
       </div>
     </div>

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { PageContentService } from '../../services/page-content.service';
 import { LangService } from '../../services/lang.service';
 import { ApiService } from '../../services/api.service';
 
 @Component({ selector: 'app-team', templateUrl: './team.component.html', styleUrls: ['./team.component.scss'] })
 export class TeamComponent implements OnInit {
   members: any[] = [];
-  constructor(public lang: LangService, private api: ApiService) {}
+  constructor(public cms: PageContentService, public lang: LangService, private api: ApiService) {}
   get isAr() { return this.lang.lang === 'ar'; }
   get prefix() { return this.lang.lang === 'en' ? '/en' : ''; }
 

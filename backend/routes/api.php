@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 
 // Public routes
 Route::post('/contact', [ContactController::class, 'submit']);
+Route::get('/pages', [PageController::class, 'published']);
 Route::get('/pages/{slug}', [PageController::class, 'show']);
 Route::get('/faqs', [FaqController::class, 'index']);
 Route::get('/services', [ServiceController::class, 'index']);
