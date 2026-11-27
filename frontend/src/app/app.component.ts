@@ -12,7 +12,7 @@ import { ApiService } from './services/api.service';
     <app-footer [settings]="settings" [lang]="langService.lang"></app-footer>
     <!-- Sticky WhatsApp mobile bottom bar -->
     <div class="mobile-bottom-bar" *ngIf="settings">
-      <a [href]="'tel:+' + settings.phone" class="bottom-btn call-btn">
+      <a [href]="'tel:' + settings.phone" class="bottom-btn call-btn">
         <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07A19.5 19.5 0 013.4 11a19.8 19.8 0 01-3.07-8.67A2 2 0 012.3 0h3a2 2 0 012 1.72c.13 1 .36 1.98.7 2.91a2 2 0 01-.45 2.11L6.4 7.84a16 16 0 006.29 6.29l1.1-1.1a2 2 0 012.11-.45c.93.34 1.91.57 2.91.7A2 2 0 0122 16.9z"/></svg>
         {{ lang === 'ar' ? 'اتصل الآن' : 'Call Now' }}
       </a>

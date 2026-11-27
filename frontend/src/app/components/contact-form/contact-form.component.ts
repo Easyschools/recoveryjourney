@@ -25,7 +25,7 @@ export class ContactFormComponent implements OnInit {
     this.form = this.fb.group({
       name: [''],
       phone: ['', [Validators.required, Validators.pattern(/^[0-9٠-٩]{10,11}$/)]],
-      consultation_for: [''],
+      consultation_for: ['self'],
       message: [''],
       website: [''], // honeypot
       locale: [this.lang],

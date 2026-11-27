@@ -25,7 +25,7 @@
     <!-- Contact -->
     <div class="footer-contact">
       <span class="footer-heading">{{ isAr ? 'تواصل معنا' : 'Contact' }}</span>
-      <a [href]="'tel:+' + settings?.phone" dir="ltr" class="phone-link">{{ settings?.phone || '0128 266 2870' }}</a>
+      <a [href]="'tel:' + settings?.phone" dir="ltr" class="phone-link">{{ settings?.phone || '0128 266 2870' }}</a>
       <a [href]="'https://wa.me/' + settings?.whatsapp" target="_blank">{{ isAr ? 'واتساب على نفس الرقم' : 'WhatsApp same number' }}</a>
       <a [href]="'mailto:' + settings?.email">{{ settings?.email }}</a>
       <a [href]="settings?.maps_url" target="_blank" rel="noopener">{{ isAr ? settings?.address_ar : settings?.address_en }}</a>

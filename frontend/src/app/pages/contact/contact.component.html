@@ -12,7 +12,7 @@
         <h2>{{ cms.text('contact.t06', isAr ? 'تكفي مكالمة أولى سرية' : 'One confidential call is enough') }}</h2>
         <p>{{ cms.text('contact.t07', isAr ? 'نستمع فيها إلى حالتك أو حالة من تهتم بأمره، ونوضح لك الخطوات التالية. الخصوصية مضمونة من أول اتصال.' : 'We listen to your situation or someone you care about and explain the next steps. Privacy guaranteed from the first call.') }}</p>
         <div class="contact-links">
-          <a [href]="'tel:+' + settings.phone" class="contact-link">
+          <a [href]="'tel:' + settings.phone" class="contact-link">
             <span>{{ cms.text('contact.t08', isAr ? 'اتصل بنا — المكالمة سرية' : 'Call us — Confidential') }}</span>
             <span class="contact-link-val" dir="ltr">{{ settings.phone }}</span>
           </a>

@@ -13,7 +13,7 @@ import { Component, Input } from '@angular/core';
           <a [routerLink]="lang === 'ar' ? '/contact' : '/en/contact'" class="cta-primary">
             {{ lang === 'ar' ? 'احجز تقييمك السري الآن' : 'Book Your Confidential Assessment' }}
           </a>
-          <a [href]="'tel:+' + phone" class="cta-secondary">
+          <a [href]="'tel:' + phone" class="cta-secondary">
             {{ lang === 'ar' ? 'اتصل الآن' : 'Call Now' }}
           </a>
         </div>

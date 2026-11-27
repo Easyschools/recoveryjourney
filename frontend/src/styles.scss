@@ -446,3 +446,169 @@ app-site-image .has-photo {
 
   img { display: block; width: 100%; height: 100%; object-fit: cover; }
 }
+
+/* ══ Approved design ═══════════════════════════════════ */
+:root {
+  --navy-2: #16264A;
+  --navy-line: #2A3B60;
+  --gold-light: #E3C27A;
+  --gold-dark: #8A6417;
+  --gold-ink: #6B5320;
+  --gold-tint: #F1E6C8;
+  --sand: #EFE7D5;
+  --line: #E8E0CC;
+  --input-line: #D8CDB2;
+  --text-muted: #3D4A63;
+  --text-on-navy: #C9D1E0;
+}
+.container { max-width: 1240px; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.eyebrow { display: block; letter-spacing: 0; text-transform: none; font-size: 15px; color: var(--gold-dark); }
+.eyebrow.light, .eyebrow.gold-light, .card-navy .eyebrow { color: var(--gold-light); }
+.section-head p { color: var(--text-muted); opacity: 1; }
+.two-col p { color: var(--text-muted); opacity: 1; }
+.two-col .card-navy p, .card-navy p, .muted-light { color: var(--text-on-navy); }
+.card-white, .card-navy { border-radius: 20px; }
+.card-white { border: 1px solid var(--line); box-shadow: none; }
+
+/* Home */
+.page-home {
+  section h2 { font-size: clamp(27px, 3.6vw, 44px); line-height: 1.45; margin-bottom: 14px; }
+  .section-head:not(.center) { text-align: start; max-width: 720px; p { margin-inline: 0; } }
+  .section-head.light p { color: var(--text-on-navy); }
+}
+.hero { background: var(--navy); color: #fff; padding: 72px 0; }
+.hero-inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 48px; align-items: center; }
+.hero-content { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+.hero-badge { border: 1px solid rgba(201,160,67,.5); color: var(--gold-light); border-radius: var(--pill); padding: 6px 16px; font-size: 14px; }
+.hero-title { font-size: clamp(36px, 5.2vw, 66px); line-height: 1.35; }
+.hero-title-gold { color: var(--gold-light); }
+.hero-lead { font-size: 20px; font-weight: 500; }
+.hero-desc { color: var(--text-on-navy); max-width: 560px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero .btn-outline { color: #fff; border: 1.5px solid rgba(255,255,255,.5); &:hover { background: #fff; color: var(--navy); } }
+.hero-visual { display: flex; flex-direction: column; gap: 16px; }
+.hero .stats-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; padding: 0; }
+.stat-card {
+  background: #fff; color: var(--navy); border-radius: 16px; padding: 14px 8px; text-align: center;
+  display: flex; flex-direction: column; justify-content: center;
+  .stat-num { font-family: 'Noto Naskh Arabic', serif; font-size: clamp(22px, 3vw, 32px); font-weight: 700; color: var(--gold-dark); }
+  .stat-label { font-size: 14px; color: var(--text-muted); }
+}
+
+.trust-bar { display: block; background: #fff; border-bottom: 1px solid var(--line); padding: 26px 0; }
+.trust-inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 14px 24px; }
+.trust-item { color: var(--navy); font-size: 15px; font-weight: 500; align-items: flex-start; &::before { content: none; } }
+.diamond { color: var(--gold); }
+
+.about-section, .therapies-section, .family-section { padding: 88px 0; }
+.about-grid, .therapies-grid, .family-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 48px; align-items: start; }
+.about-left { display: flex; flex-direction: column; gap: 12px; p { color: var(--text-muted); } }
+.about-right { display: flex; flex-direction: column; gap: 20px; }
+.card-vision, .card-philosophy {
+  border-radius: 20px; padding: 28px;
+  h3 { font-size: 23px; line-height: 1.5; margin: 4px 0 10px; }
+}
+.card-vision { background: #fff; border: 1px solid var(--line); p { color: var(--text-muted); } }
+.card-philosophy { background: var(--navy); color: #fff; p { color: var(--text-on-navy); } }
+
+.services-section, .faq-section { background: #fff; border-block: 1px solid var(--line); padding: 88px 0; }
+.services-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 14px; }
+.service-card, .therapy-card {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px;
+  color: var(--navy); font-size: 16px; font-weight: 600;
+}
+.service-card { background: var(--cream); }
+.therapy-card { background: #fff; &::before { content: none; } }
+.service-card .code-badge, .therapy-code {
+  flex: none; margin: 0; background: var(--gold-tint); color: var(--gold-ink);
+  border-radius: var(--pill); padding: 4px 10px; font-size: 12px; font-weight: 700;
+}
+.therapies-list { grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 12px; }
+
+.journey-section, .journey-dark-section { background: var(--navy); color: #fff; padding: 88px 0; }
+.step-card { background: var(--navy-2); border-color: var(--navy-line); border-radius: 16px; }
+.step-card .step-desc { color: var(--text-on-navy); font-size: 15px; }
+
+.family-grid > div > p { color: var(--text-muted); }
+.family-grid .family-steps { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 28px; }
+.family-step .family-num { background: var(--gold-tint); color: var(--gold-ink); }
+.privacy-note { background: var(--sand); border: 0; border-radius: 16px; p { opacity: 1; color: var(--text-muted); } }
+
+.faq-inner { max-width: 880px; }
+.page-home .faq-item { background: var(--cream); }
+.faq-a { color: var(--text-muted); }
+.faq-more { text-align: center; margin-top: 28px; }
+
+/* Contact: white text needs a dark background */
+.contact-section, .contact-section-page { background: var(--navy); color: #fff; padding: 72px 0; }
+.contact-info { p { color: var(--text-on-navy); } h2 { color: #fff; } }
+.contact-grid > * { min-width: 0; }
+.contact-link {
+  opacity: 1; font-size: 14px; background: var(--navy-2); border-color: var(--navy-line); color: var(--text-on-navy);
+  &:hover { background: var(--navy-line); }
+  .contact-link-val { color: var(--gold-light); overflow-wrap: anywhere; }
+  .contact-link-addr-text { opacity: 1; }
+}
+
+/* Inner pages */
+.detox-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px; }
+.family-banner {
+  margin-top: 20px; background: var(--navy); color: #fff; border-radius: 20px; padding: 32px;
+  display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between;
+  div { flex: 1 1 320px; }
+  h3 { font-size: 24px; margin-bottom: 6px; }
+  p { color: var(--text-on-navy); }
+}
+.two-col .roles-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); margin: 0; }
+.role-title { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+.role-desc { font-size: 15px; color: var(--text-muted); }
+.highlight-title { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+.section-title { margin-bottom: 24px; }
+.member-name { font-weight: 700; font-size: 17px; }
+
+/* Photos */
+.photo-placeholder, .room-placeholder, .photo-box {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  border-radius: 20px; padding: 24px; font-size: 15px;
+}
+.photo-placeholder { background: var(--navy-2); border: 1px dashed #3A4C74; color: #AEB8CC; min-height: 340px; }
+.room-placeholder, .photo-box { background: var(--sand); color: var(--gold-ink); min-height: 240px; }
+app-site-image .has-photo { min-height: 0; border-radius: 20px; }
+.gallery-row { margin-top: 40px; }
+
+/* Header on narrow screens */
+@media (max-width: 600px) {
+  app-header .header-inner { flex-wrap: nowrap; gap: 8px; padding-inline: 16px; }
+  app-header .header-inner .logo-link { gap: 8px; min-width: 0; }
+  app-header .header-inner .logo-link img { width: 40px; height: 40px; }
+  app-header .header-inner .logo-name { font-size: 18px; }
+  app-header .header-inner .logo-sub { font-size: 10.5px; }
+  app-header .header-inner .header-actions { gap: 6px; flex: none; }
+  /* WhatsApp is already in the bottom bar */
+  app-header .header-inner .wa-icon-btn, app-header .header-inner .cta-btn { display: none; }
+}
+
+@media (max-width: 768px) {
+  body { padding-bottom: 72px; }
+  .hero { padding: 32px 0 40px; }
+  .hero-inner { gap: 28px; }
+  .hero-content { gap: 14px; }
+  .hero-title { font-size: 34px; }
+  .hero-lead { font-size: 17px; }
+  .hero-desc { font-size: 15px; }
+  .hero-actions { width: 100%; max-width: 360px; flex-direction: column; gap: 10px; margin-inline: auto; }
+  .hero-actions a { min-height: 44px; padding: 8px 18px; font-size: 14px; }
+  .btn-gold, .btn-navy, .btn-outline { padding: 10px 20px; font-size: 15px; min-height: 44px; }
+  .photo-placeholder, .room-placeholder, .photo-box { min-height: 200px; }
+  .about-section, .therapies-section, .family-section, .journey-section, .services-section, .faq-section,
+  .contact-section, .contact-section-page, .journey-dark-section { padding: 48px 0; }
+  .about-grid, .therapies-grid, .family-grid { gap: 28px; }
+  .container { padding-inline: 18px; }
+  .services-grid { grid-template-columns: 1fr; gap: 10px; }
+  .step-card { padding: 22px; }
+}
+.photo-box:not(.has-photo) { aspect-ratio: auto; }
+.two-col > * { min-width: 0; }

@@ -3,7 +3,7 @@
   <div class="top-bar">
     <div class="container top-bar-inner">
       <span>{{ isAr ? 'خط سري على مدار الساعة:' : 'Confidential line 24/7:' }}
-        <a [href]="'tel:+' + settings?.phone" dir="ltr" class="top-phone">{{ settings?.phone || '0128 266 2870' }}</a>
+        <a [href]="'tel:' + settings?.phone" dir="ltr" class="top-phone">{{ settings?.phone || '0128 266 2870' }}</a>
       </span>
       <span class="top-addr hide-mobile">{{ isAr ? settings?.address_ar : settings?.address_en }}</span>
     </div>

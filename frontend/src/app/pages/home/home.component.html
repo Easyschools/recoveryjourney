@@ -13,7 +13,7 @@
         <p class="hero-desc">{{ cms.text('home.t05', isAr ? 'كل حالة مختلفة عن الأخرى، ولهذا لا نتعامل مع المرضى بنفس الخطة. نبدأ بفحوصات وتقييم دقيق، ثم نضع برنامجًا مصممًا خصيصًا لاحتياجك.' : 'Every case is different. We start with thorough assessments and design a personalized program for your specific needs.') }}</p>
         <div class="hero-actions">
           <a [routerLink]="prefix + '/contact'" class="btn-gold">{{ cms.text('home.t06', isAr ? 'احجز تقييمك السري الآن' : 'Book Your Confidential Assessment Now') }}</a>
-          <a [href]="'tel:+' + settings?.phone" class="btn-outline">{{ cms.text('home.t07', isAr ? 'تحدّث معنا الآن — المكالمة سرية' : 'Talk to us now — Confidential call') }}</a>
+          <a [href]="'tel:' + settings?.phone" class="btn-outline">{{ cms.text('home.t07', isAr ? 'تحدّث معنا الآن — المكالمة سرية' : 'Talk to us now — Confidential call') }}</a>
         </div>
       </div>
       <div class="hero-visual">
@@ -160,7 +160,7 @@
         <h2>{{ cms.text('home.t38', isAr ? 'تكفي مكالمة أولى سرية' : 'One confidential call is enough') }}</h2>
         <p>{{ cms.text('home.t39', isAr ? 'نستمع فيها إلى حالتك، ونوضح لك الخطوات التالية. الخصوصية مضمونة من أول اتصال.' : 'We listen to your situation and explain the next steps. Privacy is guaranteed from the first call.') }}</p>
         <div class="contact-links" *ngIf="settings">
-          <a [href]="'tel:+' + settings.phone" class="contact-link">
+          <a [href]="'tel:' + settings.phone" class="contact-link">
             <span>{{ cms.text('home.t40', isAr ? 'اتصل بنا — المكالمة سرية' : 'Call us — Confidential') }}</span>
             <span class="contact-link-val" dir="ltr">{{ settings.phone }}</span>
           </a>
